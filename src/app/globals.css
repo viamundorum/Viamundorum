@@ -1,0 +1,888 @@
+@import "tailwindcss";
+
+/* Ide jönnek a változóid a mundorum.css-ből */
+:root {
+  --font-base: "Georgia", serif;
+  --body-bg: linear-gradient(180deg, #0f1c2e, #1e2f4a);
+  --text-main: #ffffff;
+  --header-bg: #0a1424;
+  --header-text: #cdd9ed;
+  --main-bg: linear-gradient(to right, #0a1424, #4682b4);
+  --footer-bg: #0a1424;
+  --footer-text: #cdd9ed;
+  --card-bg: #cdd9ed;
+  --card-text: #0a1424;
+  --accent: #cdd9ed;
+  --surface: white;
+  --button-bg: #1f2a38;
+  --shadow-soft: rgba(0,0,0,0.08);
+  --line-height: 1.6;
+  --accent-color: #ffd700;
+}
+
+/* Ide jön a main.css és mundorum.css tartalma (Reset és elemek) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--body-bg);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: var(--line-height);
+}
+
+/* ... Ide másold be a main.css és mundorum.css összes többi részét ... */
+/* A @media részeket se felejtsd el a végén! */
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  /* Ha van alul egy világos vonal, próbáld meg ideiglenesen levenni: */
+  /* border-bottom: none !important; */
+}
+
+header h1 {
+  margin: 0;
+  font-weight: var(--font-weight);
+  letter-spacing: 1px;
+  text-align: right;
+}
+/* =========================
+   NAVIGÁCIÓ
+========================= */
+
+nav {
+  display: flex;
+  justify-content: center; /* középre igazítja */
+  gap: 40px;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  bottom: -3px;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a:hover::after {
+  width: calc(100% + 8px);
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 2px 10px; /* Kevesebb padding felül/alul */
+  border: 1px solid rgba(255,255,255,0.2); /* Opcionális: finomabb keret */
+}
+
+.search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: white;
+  padding: 4px;
+  font-size: 0.85rem; /* Kisebb betű a keresőbe */
+}
+
+.search input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.search button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+/* =========================
+   MAIN TARTALOM
+========================= */
+
+main {
+  flex: 1;
+  padding: 80px 10%; /* Növeld meg az első értéket (pl. 60px-ről 80px-re) */
+  background: var(--main-bg);
+  margin-top: 0; /* Biztosítsuk, hogy ne legyen negatív margó */
+}
+
+/* =========================
+   INTRO SZEKCIÓ
+========================= */
+
+.intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   HERO SZEKCIÓ
+========================= */
+
+/* Az intro szekció testreszabása a kezdőoldalhoz */
+.intro {
+  padding: 80px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Az idézet stílusa - Nagyobb, hangsúlyos */
+.latin-motto {
+  font-family: 'Georgia', serif; /* Egy elegánsabb betűtípus jól áll neki */
+  font-size: 2.5rem; /* Jelentősen nagyobb, mint a többi szöveg */
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* A VITAE szó kiemelése */
+.highlight-vitae {
+  color: #ffd700; /* A projekt arany vagy kék színe */
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3); /* Egy kis ragyogás */
+}
+
+/* A cím - Kisebb, mint az idézet */
+.intro h1 {
+  font-size: 1.8rem;
+  opacity: 0.9;
+  margin-bottom: 15px;
+  color: var(--main-color);
+}
+
+/* Az alcím - Még kisebb, olvasható méret */
+.hero-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+  opacity: 0.8;
+  color: #ddd;
+}
+
+/* Mobilos igazítás */
+@media (max-width: 600px) {
+  .latin-motto {
+    font-size: 1.8rem;
+  }
+  .intro h1 {
+    font-size: 1.4rem;
+  }
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Közös alapstílus mindkét gombnak */
+.cta-primary, .cta-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 12px; /* Kicsit szögletesebb, elegánsabb */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Elsődleges gomb (Világok) - Arany szegéllyel */
+.cta-primary {
+  background: rgba(255, 255, 255, 0.05); /* Nagyon enyhe sötét/áttetsző háttér */
+  color: #FFD700; /* Arany szöveg */
+  border: 2px solid #FFD700; /* AZ ARANY SZEGÉLY */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2); /* Enyhe arany ragyogás */
+}
+
+.cta-primary:hover {
+  background: #FFD700; /* Hoverre "feltöltődik" arannyal */
+  color: #141b26; /* A sötét háttérszíned legyen a szöveg */
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+  filter: brightness(1.1);
+}
+
+/* Elsődleges gomb - A Világokhoz 
+.cta-primary {
+   A korábbi zöld helyett próbáld ki a fő színedet vagy egy mélyebb kéket 
+  background: linear-gradient(135deg, var(--main-color), #1f2a38); 
+  color: white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}*/
+
+
+/* Másodlagos gomb (Rólunk) - Szolidabb, fehér/szürke szegéllyel */
+.cta-secondary {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-secondary:hover {
+  border-color: white;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Másodlagos gomb - A Projektről 
+.cta-secondary {
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+}*/
+
+
+/* Mobilon egymás alá kerüljenek */
+@media (max-width: 600px) {
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-primary, .cta-secondary {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+/* =========================
+   VILÁG KÁRTYÁK
+========================= */
+
+.world-grid {
+  display: grid;
+
+  /* Automatikusan annyi oszlop lesz, amennyi kifér, minimum 280px szélesek */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center; /* Középre teszi a kártyákat az oszlopon belül */
+  padding: 20px 0;
+  margin-top: 20px; /* Toljuk lejjebb a rácsot a szövegtől is */
+}
+
+
+.world-card {
+  background: var(--card-bg);
+  color: var(--card-text);
+  text-decoration: none;
+  /*box-shadow: 0 6px 18px var(--shadow-soft);*/
+  border-top:4px solid var(--main-color); 
+  text-align: center;
+
+  /* Vegyük le a fix szélességet, hogy a grid irányítsa */
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100px;
+
+  /* ... meglévő kódjaid ... */
+  box-shadow: inset 0 0 0 1px var(--main-color); /* Egy vékony belső keret a kártya színével */
+  outline: 1px solid transparent; /* Segít a böngészőnek az élsimításban */
+  backface-visibility: hidden; /* Stabilizálja a kártyát animáció közben */
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  margin-top: 0;
+  padding-top: 0;
+  background: transparent;
+}
+
+.world-card:hover {
+  transform: translateY(-6px);
+}
+
+.world-card h2 {
+  margin-top: 0;
+  color: var(--card-text);
+  font-size: 1.1rem;
+}
+
+.world-card p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.world-card.disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.world-card{
+    width:280px;
+    padding:30px;
+    border-radius:18px;
+  
+    /* Töröld ki vagy kommenteld ki: background: #ffffff; 
+    background: transparent; Így csak a specifikus gradiens látszik majd 
+    overflow: hidden;  Ez levágja a "kiszökő" fehér sarkokat a lekerekítésnél */
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:0.25s;
+    position:relative;
+}
+
+.world-card:hover{
+    transform:translateY(-6px);
+}
+
+.card-buttons{
+    margin-top:20px;
+    display:flex;
+    gap:10px;
+}
+
+.world-card .icon{
+    font-size:40px;
+    display:block;
+    margin-bottom:10px;
+    justify-content: center;
+}
+
+/* =========================
+   GOMBOK (Tanulás / Játék)
+========================= */
+
+.btn{
+    padding:8px 12px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.btn:hover{
+  filter:brightness(1.15);
+}
+
+.learn{
+  background:var(--main-color);
+  color:var(--accent-color);
+}
+
+.game{
+  background:var(--accent-color);
+  color:var(--main-color);
+}
+
+/* =========================
+   AUTH (Login / Reg)
+========================= */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.auth-column {
+    flex: 1;
+    min-width: 320px;
+    max-width: 450px;
+}
+
+/* Egységesítjük a dobozok kinézetét */
+.auth-box-log, .auth-box-sign {
+    background: var(--surface);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    color: #333;
+}
+
+.auth-box-log h3, .auth-box-sign h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--header-bg);
+}
+
+/* Mobilos nézet: egymás alá kerülnek */
+@media (max-width: 800px) {
+    .auth-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .auth-column {
+        width: 100%;
+    }
+}
+
+.auth-box-log,
+.auth-box-sign h2 {
+  font-size: large;
+  justify-content: center;
+}
+
+.auth-box-log {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: 8px;
+  color: var(--header-bg);
+}
+
+.auth-box-log input, 
+.auth-box-sign input {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0 12px 0;
+  /* EZT ADD HOZZÁ: */
+  border: 1px solid #ccc !important; 
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+}
+
+.auth-box-log button {
+  width: 100%;
+  padding: 10px;
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-box-log button:hover {
+  opacity: 0.9;
+}
+
+.auth-box-sign {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: 8px;
+  color: var(--header-bg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.auth-box-sign label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.auth-box-sign button {
+  width: 100%;
+  padding: 10px;
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-box-sign button:hover {
+  opacity: 0.9;
+}
+
+
+/* A textarea és select formázása is legyen egységes a beviteli mezőkkel */
+.auth-box-log select,
+.auth-box-log textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #ccc !important;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* A textarea ne legyen vízszintesen átméretezhető, hogy ne rontsa el a designt */
+.auth-box-log textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* A küldés gomb (input type="submit") formázása */
+.auth-box-log input[type="submit"] {
+  background-color: var(--button-bg);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.auth-box-log input[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   KAPCSOLAT OLDAL
+========================= */
+
+/* Kapcsolat oldal tárolója */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap; /* Hogy mobilon egymás alá ugorjanak */
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 3rem auto;
+  padding: 0 20px;
+  align-items: flex-start;
+}
+/* A két oszlop tárolója */
+.contact-container {
+    flex-direction: row; /* Egymás mellett legyenek */
+    justify-content: center;
+    gap: 50px; /* Távolság a két oszlop között */
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* Bal oszlop stílusa */
+.contact-info {
+  flex: 1; /* Rugalmas szélesség */
+  min-width: 300px;
+  max-width: 400px;
+  color: white; /* Vagy a dizájnodhoz illő szín */
+}
+
+.contact-info h3 {
+  margin-bottom: 1.5rem;
+  color: var(--main-color);
+}
+
+.info-item {
+  margin-bottom: 1.5rem;
+}
+
+.info-item strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--main-color);
+}
+
+/* Jobb oszlop (fehér doboz) stílusa */
+.contact-form-box {
+  flex: 1; /* Ugyanolyan rugalmas szélesség */
+  min-width: 300px;
+  max-width: 450px; /* Ne legyen túl széles */
+  background: var(--surface);
+  padding: 2rem;  /* Átvesszük az auth-box-log stílusait--> padding: 30px; */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    
+  /* Ez akadályozza meg az összecsúszást */
+  box-sizing: border-box;
+}
+
+/* Az űrlap elemeit már korábban formáztuk, de itt biztosítjuk a színeket */
+.contact-form-box label {
+  color: #333;
+}
+
+.contact-form-box input, 
+.contact-form-box select, 
+.contact-form-box textarea {
+  width: 100% !important; /* Kényszerítjük a teljes szélességet */
+  box-sizing: border-box; /* A padding ne növelje a szélességet */
+  margin-bottom: 15px;
+  border: 1px solid #ccc !important;
+  color: #333;
+}
+
+/* Mobilos nézet: ha nem férnek el egymás mellett, ugorjanak egymás alá */
+@media (max-width: 850px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-info, .contact-form-box {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* =========================
+   BACKEND GOMBOK ?
+========================= */
+
+input, select, textarea, fieldset { margin-bottom: 10px; }
+
+        input[type="reset"], input[type="submit"] {
+            background-color: var(--button-bg);
+            color: #FFF;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            width: 100%;
+        }
+
+/* =========================
+   HALADÁSI CSÍK
+========================= */
+
+.progress {
+  width: 100%;
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: green;
+  transition: width 0.3s ease;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background-color: var(--header-bg); /* Sötét háttér, mint a fejlécnek */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: auto; /* Hogy mindig az oldal alján maradjon */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Távolság a linkek között */
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Mobilon több sorba tördeli, ha nem fér el */
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--main-color); /* Hovernél kapja meg a projekt fő színét */
+  text-decoration: none;
+  color: white;
+}
+
+footer p {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin: 0;
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid rgba(255,255,255,0.1);
+  font-size: 0.9rem;
+}
+
+
+/* =========================
+   MEDIA
+========================= */
+
+
+/*
+@media (max-width: 768px)*/
+
+
+@media (max-width: 480px){
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 10px 0;
+    list-style: none;
+  }
+
+  nav li {
+    list-style: none;
+  }
+
+  nav a {
+    display: block;
+    font-size: 13px;
+    padding: 5px 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    white-space: normal; /* EZ FONTOS */
+  }
+}
+
+/* ===== MUNDORUM ===== */
+
+/* =========================
+   VILÁG KÁRTYÁK
+========================= */
+
+.world-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.world-card {
+  padding: 30px;
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.world-card.active:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+
+/* =============================
+   GOMBSZÍNEK (Tanulás / Játék)
+============================= */
+
+.via-linguae{
+  --main-color:#7a1f2b;
+  --accent-color:#ffd700;
+  background:linear-gradient(#caa43b, #efe2c4);
+}
+.via-naturae{
+  --main-color:#025909;
+  --accent-color:#ffd700;
+  background:linear-gradient(#8b5e3c, #efe2c4);
+}
+.via-domorum{
+  --main-color:#2a143d;
+  --accent-color:#ffd700;
+  background:linear-gradient(#6a3db4, #efe2c4);
+}
+.via-scaccorum{
+  --main-color:#000000;
+  --accent-color:#ffd700;
+  background: linear-gradient(#800020, #efe2c4);
+}
+.via-historiae{
+  --main-color:#8B4513;
+  --accent-color:#ffd700;
+  background:linear-gradient(#e58b5c, #efe2c4);
+}
+.via-astrae{
+  --main-color:#000080;
+  --accent-color:#ffd700;
+  background:linear-gradient(#0000CD, #efe2c4);
+}
+.via-corporum{
+  --main-color:#8B008B;
+  --accent-color:#ffd700;
+  background:linear-gradient(#FF00FF, #efe2c4);
+}
+
+/* ===== IGAZÍTÁS =====*/
+
+/* Globális fixek, hogy hasonlítson a régire */
+
+header {
+  width: 100%;
+  /* Biztosítjuk, hogy ne nyúljon túl a képernyőn */
+  max-width: 100vw; 
+}
+
+header h1 {
+  /* Itt állítsd be a pontos méretet, ami neked tetszik */
+  font-size: 1.5rem !important; 
+  margin: 0;
+}
+
+nav a {
+  /* Ha túl nagynak tűnnek a linkek */
+  font-size: 0.95rem; 
+  margin-left: 1.5rem;
+}
+
+/* A kereső fixálása */
+.search {
+  height: 32px; /* Kisebbre vesszük a magasságát */
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  font-size: 14px;
+  padding: 2px 8px;
+  height: 100%;
+}
+
+.search button {
+  padding: 0 5px;
+}
