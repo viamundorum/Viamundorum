@@ -54,6 +54,8 @@ header {
   align-items: center;
   position: relative;
   z-index: 10;
+  flex-wrap: wrap; /* Ez engedi, hogy az elemek új sorba ugorjanak */
+  gap: 15px; /* Távolság az elemek között, ha egymás alá kerülnek */
   /* Ha van alul egy világos vonal, próbáld meg ideiglenesen levenni: */
   /* border-bottom: none !important; */
 }
@@ -62,6 +64,7 @@ header h1 {
   margin: 0;
   font-weight: var(--font-weight);
   letter-spacing: 1px;
+  white-space: nowrap; /* A cím ne törjön több sorba */
   text-align: right;
 }
 /* =========================
@@ -71,6 +74,7 @@ header h1 {
 nav {
   display: flex;
   justify-content: center; /* középre igazítja */
+  flex-wrap: wrap; /* A linkek is tudjanak törni, ha kell */
   gap: 40px;
 }
 
@@ -113,6 +117,7 @@ nav a:hover::after {
   border-radius: 20px;
   padding: 2px 10px; /* Kevesebb padding felül/alul */
   border: 1px solid rgba(255,255,255,0.2); /* Opcionális: finomabb keret */
+  gap: 5px;
 }
 
 .search input {
@@ -133,6 +138,35 @@ nav a:hover::after {
   border: none;
   color: var(--accent);
   cursor: pointer;
+}
+
+/* =========================
+   MÉDIA QUERY-K (HEADER, NAV, SEARCH)
+========================= */
+
+/* MÉDIA QUERY MOBILRA */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Mobilon minden egymás alá kerül */
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav {
+    order: 2; /* A linkek legyenek a cím után */
+    justify-content: center;
+    width: 100%;
+  }
+
+  .search {
+    order: 3; /* A kereső legyen legalul */
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search input {
+    width: 80%; /* Hogy mobilon kényelmesen lehessen írni bele */
+  }
 }
 
 /* =========================

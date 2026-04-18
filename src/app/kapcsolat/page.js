@@ -40,11 +40,11 @@ export default function KapcsolatPage() {
             <input name="email" type="email" id="email" placeholder="email@example.com" />
 
             <label htmlFor="subject">Tárgy</label>
-            <select id="subject" name="subject">
+            <select id="subject" name="subject" defaultValue="egyeb">
               <option value="hiba">Hiba jelentése</option>
               <option value="javaslat">Javaslat</option>
               <option value="otlet">Új ötlet</option>
-              <option value="egyeb" selected>Egyéb</option>
+              <option value="egyeb">Egyéb</option>
             </select>
 
             <label htmlFor="feedback">Üzenet</label>
