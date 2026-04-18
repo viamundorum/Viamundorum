@@ -16,14 +16,11 @@ export default function HomePage() {
           Tanulj világokon keresztül, fedezd fel a természetet, a nyelveket vagy akár a sakk rejtelmeit.
         </p>
         
-        <div className="hero-buttons">
-          <a href="/worlds" className="btn-primary">Felfedezem a világokat</a>
-        </div>
       </section>
 
 <div className="hero-cta-group">
   <Link href="/worlds" className="cta-primary">
-    🌍 Belépés a világokba
+    🌍 Belépés a Világokba
   </Link>
   
   <Link href="/project" className="cta-secondary">
