@@ -1,8 +1,8 @@
 import "./globals.css";
 
 // A @ helyett próbáld meg relatív útvonallal (két pont visszalépést jelent):
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 export const metadata = {
   title: "Via Mundorum",
