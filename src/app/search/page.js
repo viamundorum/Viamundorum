@@ -1,7 +1,9 @@
 "use client";
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react'; // 1. Ezt add hozzá
 
-export default function SearchPage() {
+// 2. Hozz létre egy belső komponenst a tartalomnak
+function SearchContent() {
   const searchParams = useSearchParams();
   const query = searchParams.get('q');
 
@@ -9,7 +11,7 @@ export default function SearchPage() {
     <>
       <section className="intro">
         <h2>Keresési eredmények</h2>
-        <p>Találatok a következőre: <strong>{query}</strong></p>
+        <p>Találatok a következőre: <strong>{query || 'minden tartalom'}</strong></p>
       </section>
 
       <section className="auth-box-log" style={{ maxWidth: '800px', color: '#333' }}>
@@ -23,5 +25,14 @@ export default function SearchPage() {
         </ul>
       </section>
     </>
+  );
+}
+
+// 3. A fő exportban csomagold be a Suspense-be
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<div>Betöltés...</div>}>
+      <SearchContent />
+    </Suspense>
   );
 }
