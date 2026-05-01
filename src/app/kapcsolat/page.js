@@ -16,7 +16,7 @@ export default function KapcsolatPage() {
           
           <div className="info-item">
             <strong>E-mail:</strong>
-            <p>info@viamundorum.hu</p>
+            <p>viamundorum@gmail.com</p>
           </div>
 
           <div className="info-item">

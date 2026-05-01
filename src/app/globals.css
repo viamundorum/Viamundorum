@@ -882,14 +882,14 @@ footer {
   background:linear-gradient(#FF00FF, #efe2c4);
 }
 .via-renovabilorum{
-  --main-color:#A1E44D;
+  --main-color:#0F4C5C;
   --accent-color:#ffd700;
-  background:linear-gradient(#0F4C5C, #efe2c4);
+  background:linear-gradient(#4ECDC4, #efe2c4);
 }
 .via-viridorum{
-  --main-color:#4ECDC4;
+  --main-color:#343A40;
   --accent-color:#ffd700;
-  background:linear-gradient(#343A40, #efe2c4);
+  background:linear-gradient(#5a6570, #efe2c4);
 }
 
 /* ===== IGAZÍTÁS =====*/
