@@ -733,14 +733,15 @@ input, select, textarea, fieldset { margin-bottom: 10px; }
 ========================= */
 
 footer {
-  background-color: var(--header-bg); /* Sötét háttér, mint a fejlécnek */
-  color: white;
+  background-color: var(--footer-bg); /* Sötét háttér, mint a fejlécnek */
+  color: var(--footer-text);
   padding: 40px 20px;
   text-align: center;
   margin-top: auto; /* Hogy mindig az oldal alján maradjon */
 }
 
 .footer-links {
+  color: var(--footer-text);
   display: flex;
   justify-content: center;
   gap: 30px; /* Távolság a linkek között */
@@ -891,46 +892,252 @@ footer {
   --main-color:#7a1f2b;
   --accent-color:#ffd700;
   background:linear-gradient(#caa43b, #efe2c4);
+  --header-bg: #6b1f2b;
+  --header-text: #c9a227;
+  --main-bg: linear-gradient(to right, #caa43b, #efe2c4);
+  --body-bg: linear-gradient(180deg, #0f1c2e, #1e2f4a);
+  --footer-bg: #6b1f2b;        /* bordó lábléc - háttér */
+  --footer-text: #c9a227;         /* arany lábléc - szöveg */
+  --button-hover: #8b2a3a;
+  --card-bg: #efe2c4;
+  --card-text: #2a1c1c;
+  --text-main: #2a1c1c;       /* main - szöveg */
+
+
+  --card-border: 3px solid #6b1f2b;
+  --accent: #c9a227;         /* arany navsáv - szöveg */
+  --surface: white;
+  --button-bg: #1f2a38;
+  --shadow-soft: rgba(0,0,0,0.08);
+  --font-weight: 500;
+  --line-height: 1.6;
+  --card-game-bg: #ffd700;
 }
+
+/* Alkalmazzuk ezeket a globális elemekre, AMIKOR az osztály aktív */
+body.via-linguae, body.via-naturae /* ... összes többi felsorolva ... */ {
+  background: var(--body-bg) !important;
+  color: var(--text-main);
+}
+
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+
+/* Hover effektus példa */
+.big-card:hover {
+  filter: brightness(1.2);
+  border: 2px solid var(--accent-color);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
 .via-naturae{
   --main-color:#025909;
   --accent-color:#ffd700;
   background:linear-gradient(#8b5e3c, #efe2c4);
+  --header-bg: #025909;
+  --header-text: #ffdead;
+  --main-bg: linear-gradient(to right, #8b5e3c, #efe2c4);
+  --body-bg: linear-gradient(180deg, #0f1c2e, #1e2f4a);
+  --footer-bg: #025909;        /* lábléc - háttér */
+  --footer-text: #ffdead;         /* lábléc - szöveg */
+  --button-hover: #8b2a3a;
+  --card-bg: #efe2c4;
+  --card-text: #2a1c1c;
+  --text-main: #2a1c1c; 
+
+
+  --card-border: 3px solid #6b1f2b;
+  --accent: #ffdead;         /* navsáv - szöveg */
+  --surface: white;
+  --button-bg: #1f2a38;
+  --shadow-soft: rgba(0,0,0,0.08);
+  --font-weight: 500;
+  --line-height: 1.6;
+  --card-game-bg: #ffd700;
 }
 .via-domorum{
   --main-color:#2a143d;
   --accent-color:#ffd700;
   background:linear-gradient(#6a3db4, #efe2c4);
+  --header-bg: #2a143d;
+  --header-text: #dda0dd;
+  --main-bg: linear-gradient(to right, #6a3db4, #efe2c4);
+  --body-bg: linear-gradient(180deg, #0f1c2e, #1e2f4a);
+  --footer-bg: #2a143d;        /* lábléc - háttér */
+  --footer-text: #dda0dd;         /* lábléc - szöveg */
+  --button-hover: #8b2a3a;
+  --card-bg: #efe2c4;
+  --card-text: #2a1c1c;
+  --text-main: #2a1c1c; 
+
+
+  --card-border: 3px solid #6b1f2b;
+  --accent: #dda0dd;         /* navsáv - szöveg */
+  --surface: white;
+  --button-bg: #1f2a38;
+  --shadow-soft: rgba(0,0,0,0.08);
+  --font-weight: 500;
+  --line-height: 1.6;
+  --card-game-bg: #ffd700;
 }
 .via-scaccorum{
   --main-color:#000000;
   --accent-color:#ffd700;
   background: linear-gradient(#800020, #efe2c4);
+  --header-bg: #000000;
+  --header-text: #dc143c;
+  --main-bg: linear-gradient(to right, #800020, #efe2c4);
+  --body-bg: linear-gradient(180deg, #0f1c2e, #1e2f4a);
+  --footer-bg: #000000;        /* lábléc - háttér */
+  --footer-text: #dc143c;         /* lábléc - szöveg */
+  --button-hover: #8b2a3a;
+  --card-bg: #efe2c4;
+  --card-text: #2a1c1c;
+  --text-main: #2a1c1c; 
+
+
+  --card-border: 3px solid #6b1f2b;
+  --accent: #dc143c;         /* navsáv - szöveg */
+  --surface: white;
+  --button-bg: #1f2a38;
+  --shadow-soft: rgba(0,0,0,0.08);
+  --font-weight: 500;
+  --line-height: 1.6;
+  --card-game-bg: #ffd700;
 }
 .via-historiae{
   --main-color:#8B4513;
   --accent-color:#ffd700;
   background:linear-gradient(#e58b5c, #efe2c4);
+  --header-bg: #8b4513;
+  --header-text: #e58b5c;
+  --main-bg: linear-gradient(to right, #e58b5c, #efe2c4);
+  --body-bg: linear-gradient(180deg, #0f1c2e, #1e2f4a);
+  --footer-bg: #8b4513;        /* lábléc - háttér */
+  --footer-text: #e58b5c;         /* lábléc - szöveg */
+  --button-hover: #8b2a3a;
+  --card-bg: #efe2c4;
+  --card-text: #2a1c1c;
+  --text-main: #2a1c1c; 
+
+
+  --card-border: 3px solid #6b1f2b;
+  --accent: #e58b5c;         /* navsáv - szöveg */
+  --surface: white;
+  --button-bg: #1f2a38;
+  --shadow-soft: rgba(0,0,0,0.08);
+  --font-weight: 500;
+  --line-height: 1.6;
+  --card-game-bg: #ffd700;
 }
 .via-astrae{
   --main-color:#000080;
   --accent-color:#ffd700;
   background:linear-gradient(#0000CD, #efe2c4);
+  --header-bg: #000080;
+  --header-text: #87CEEB;
+  --main-bg: linear-gradient(to right, #0000cd, #efe2c4);
+  --body-bg: linear-gradient(180deg, #0f1c2e, #1e2f4a);
+  --footer-bg: #000080;        /* lábléc - háttér */
+  --footer-text: #87CEEB;         /* lábléc - szöveg */
+  --button-hover: #8b2a3a;
+  --card-bg: #efe2c4;
+  --card-text: #2a1c1c;
+  --text-main: #2a1c1c; 
+
+
+  --card-border: 3px solid #6b1f2b;
+  --accent: #87CEEB;         /* navsáv - szöveg */
+  --surface: white;
+  --button-bg: #1f2a38;
+  --shadow-soft: rgba(0,0,0,0.08);
+  --font-weight: 500;
+  --line-height: 1.6;
+  --card-game-bg: #ffd700;
 }
 .via-corporum{
   --main-color:#8B008B;
   --accent-color:#ffd700;
   background:linear-gradient(#FF00FF, #efe2c4);
+  --header-bg: #8b008b;
+  --header-text: #FA8072;
+  --main-bg: linear-gradient(to right, #ff00ff, #efe2c4);
+  --body-bg: linear-gradient(180deg, #0f1c2e, #1e2f4a);
+  --footer-bg: #8b008b;        /* lábléc - háttér */
+  --footer-text: #fa8072;         /* lábléc - szöveg */
+  --button-hover: #8b2a3a;
+  --card-bg: #efe2c4;
+  --card-text: #2a1c1c;
+  --text-main: #2a1c1c; 
+
+
+  --card-border: 3px solid #6b1f2b;
+  --accent: #fa8072;         /* navsáv - szöveg */
+  --surface: white;
+  --button-bg: #1f2a38;
+  --shadow-soft: rgba(0,0,0,0.08);
+  --font-weight: 500;
+  --line-height: 1.6;
+  --card-game-bg: #ffd700;
 }
 .via-renovabilorum{
   --main-color:#0F4C5C;
   --accent-color:#ffd700;
   background:linear-gradient(#4ECDC4, #efe2c4);
+  --header-bg: #0f4c5c;
+  --header-text: #4ecdc4;
+  --main-bg: linear-gradient(to right, #4ecdc4, #efe2c4);
+  --body-bg: linear-gradient(180deg, #0f1c2e, #1e2f4a);
+  --footer-bg: #0f4c5c;        /* lábléc - háttér */
+  --footer-text: #4ecdc4;         /* lábléc - szöveg */
+  --button-hover: #8b2a3a;
+  --card-bg: #efe2c4;
+  --card-text: #2a1c1c;
+  --text-main: #2a1c1c; 
+
+
+  --card-border: 3px solid #6b1f2b;
+  --accent: #4ecdc4;         /* navsáv - szöveg */
+  --surface: white;
+  --button-bg: #1f2a38;
+  --shadow-soft: rgba(0,0,0,0.08);
+  --font-weight: 500;
+  --line-height: 1.6;
+  --card-game-bg: #ffd700;
 }
 .via-viridorum{
   --main-color:#343A40;
   --accent-color:#ffd700;
   background:linear-gradient(#5a6570, #efe2c4);
+  --header-bg: #343a40;
+  --header-text: #f5f5f5;
+  --main-bg: linear-gradient(to right, #5a6570, #efe2c4);
+  --body-bg: linear-gradient(180deg, #0f1c2e, #1e2f4a);
+  --footer-bg: #343a40;        /* lábléc - háttér */
+  --footer-text: #f5f5f5;         /* lábléc - szöveg */
+  --button-hover: #8b2a3a;
+  --card-bg: #efe2c4;
+  --card-text: #2a1c1c;
+  --text-main: #2a1c1c; 
+
+
+  --card-border: 3px solid #6b1f2b;
+  --accent: #f5f5f5;         /* navsáv - szöveg */
+  --surface: white;
+  --button-bg: #1f2a38;
+  --shadow-soft: rgba(0,0,0,0.08);
+  --font-weight: 500;
+  --line-height: 1.6;
+  --card-game-bg: #ffd700;
 }
 
 /* ===== IGAZÍTÁS =====*/

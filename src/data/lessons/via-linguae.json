@@ -2,14 +2,29 @@
   "worldId": "via-linguae",
   "chapters": [
     {
-      "id": "abc",
-      "title": "Az ábécé",
+      "id": "bevezetes",
+      "title": "A nyelvek",
       "content": "### A finn ábécé\nItt jön a részletes leírás..."
     },
     {
-      "id": "szamok",
-      "title": "Számok 1-10-ig",
-      "content": "1: yksi, 2: kaksi..."
+      "id": "hangtan",
+      "title": "Hangtan",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "alaktan",
+      "title": "Alaktan",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "szófajtan",
+      "title": "Szófajtan",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "mondattan",
+      "title": "Mondattan",
+      "content": "Tartalom..."
     }
   ]
 }

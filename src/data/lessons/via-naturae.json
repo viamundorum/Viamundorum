@@ -1,0 +1,30 @@
+{
+  "worldId": "via-naturae",
+  "chapters": [
+    {
+      "id": "allatok",
+      "title": "Állatok",
+      "content": "Itt jön a részletes leírás..."
+    },
+    {
+      "id": "novenyek",
+      "title": "Növények",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "gombak",
+      "title": "Gombák",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "allatnyomok",
+      "title": "Állatnyomok",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "turajelek",
+      "title": "Túrajelzések",
+      "content": "Tartalom..."
+    }
+  ]
+}

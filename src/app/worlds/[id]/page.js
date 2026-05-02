@@ -12,29 +12,25 @@ export default function WorldPage({ params }) {
 
   useEffect(() => {
     if (world) {
-      const root = document.body;
+      const root = document.documentElement; // A html elem
+      const body = document.body;
       const headerTitle = document.querySelector('header h1');
-      const originalTitle = "Via Mundorum"; // Az alapértelmezett név
+      const originalTitle = "Via Mundorum";
 
-      // 1. Színek átállítása
-      root.style.setProperty('--current-header-bg', world.color);
-      root.style.setProperty('--current-footer-bg', world.color);
-      root.style.setProperty('--current-main-bg', world.bgGradient);
-      root.style.setProperty('--current-accent', world.accent);
+      // 1. Az adott világ osztályának hozzáadása (pl. .via-linguae)
+      // Ez aktiválja a global.css-ben megírt változókat
+      body.classList.add(id);
 
-      // 2. Cím átírása a fejlécben
+      // 2. Cím átírása
       if (headerTitle) headerTitle.innerText = world.title;
 
-      // Takarítás, amikor kilépünk a világból
+      // Takarítás kilépéskor
       return () => {
-        root.style.removeProperty('--current-header-bg');
-        root.style.removeProperty('--current-footer-bg');
-        root.style.removeProperty('--current-main-bg');
-        root.style.removeProperty('--current-accent');
+        body.classList.remove(id);
         if (headerTitle) headerTitle.innerText = originalTitle;
       };
     }
-  }, [world]);
+  }, [world, id]);
 
   if (!world) return notFound();
 

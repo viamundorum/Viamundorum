@@ -1,0 +1,35 @@
+{
+  "worldId": "via-renovabilorum",
+  "chapters": [
+    {
+      "id": "bevezetes",
+      "title": "A sakk",
+      "content": "### Itt jön a részletes leírás..."
+    },
+    {
+      "id": "tortenet",
+      "title": "Története",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "tabla",
+      "title": "Tábla",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "babuk",
+      "title": "Bábuk",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "lepesek",
+      "title": "Lépések",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "emberek",
+      "title": "Híres sakkozók",
+      "content": "Tartalom..."
+    }
+  ]
+}

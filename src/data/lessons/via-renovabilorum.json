@@ -1,0 +1,35 @@
+{
+  "worldId": "via-renovabilorum",
+  "chapters": [
+    {
+      "id": "bevezetes",
+      "title": "Megújuló energiaforrások",
+      "content": "### Itt jön a részletes leírás..."
+    },
+    {
+      "id": "bio",
+      "title": "Bioenergia",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "geo",
+      "title": "Geotermikus energia",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "nap",
+      "title": "Napenergia",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "szel",
+      "title": "Szélenergia",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "viz",
+      "title": "Vízenergia",
+      "content": "Tartalom..."
+    }
+  ]
+}
