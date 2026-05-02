@@ -930,3 +930,57 @@ nav a {
 .search button {
   padding: 0 5px;
 }
+
+/*===================
+   World [id] page
+===================*/
+
+.big-button-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.big-card {
+  width: 300px;
+  height: 350px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.big-card:hover {
+  transform: scale(1.05);
+}
+
+.big-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.big-card.game {
+  color: #0a1424; /* A sötétebb szöveg az arany háttéren jobban olvasható */
+}
+
+.big-card-link {
+  text-decoration: none; /* Aláhúzás eltüntetése */
+  color: inherit;        /* Szín megtartása */
+  display: block;        /* Hogy a teljes terület kattintható legyen */
+}
+
+/* Ha a kártyán volt hover effekt (pl. transform), 
+   azt most érdemes a link-re vagy a kártyára tenni, de így is működik: */
+.big-card-link:hover .big-card {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}

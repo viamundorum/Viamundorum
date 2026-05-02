@@ -1,17 +1,62 @@
 export const worldsData = {
-  "mai-magyar": {
-    title: "Mai magyar nyelv",
-    description: "Rendszerek, hangok, történet. Fedezd fel anyanyelved rejtett összefüggéseit.",
-    color: "#4a1a1a", // Mélyvörös
-    accent: "#ffd700", // Arany
-    bgGradient: "linear-gradient(135deg, #f5e6ca, #d4a373)" 
+  "via-renovabilorum": { // Ez az ID megegyezik a CSS .via-renovabilorum-mal
+    title: "Via Renovabilorum",
+    description: "A megújuló energiák világa",
+    icon: "⚡🌿",
+    disabled: false
   },
-  "finn": {
-    title: "Finn nyelv",
-    description: "A tavi emberek nyelve. Ismerkedj meg az északi rokonokkal!",
-    color: "#1a3a5a", // Sötétkék
-    accent: "#00d1ff", // Világoskék
-    bgGradient: "linear-gradient(135deg, #e0f2fe, #7dd3fc)"
+  "via-scaccorum": {
+    title: "Via Scaccorum",
+    description: "A sakk világa",
+    icon: "♟️",
+    disabled: false
   },
-  // ... a többi világ
+  "via-viridorum": { 
+    title: "Via Viridorum", 
+    description: "Az újrahasznosítás világa", 
+    icon: "♻️", 
+    disabled: false 
+  },
+  "via-linguae": {
+    title: "Via Linguae", 
+    description: "A nyelvek világa", 
+    icon: "🌏", 
+    disabled: false ,
+    lessons: [
+      { id: "alapok", title: "Alapvető kifejezések", content: "Itt kezdődik a nyelvtanulás..." },
+      { id: "nyelvtan", title: "Mondatszerkezet", content: "A mondatok felépítése..." }
+    ],
+    mapData: { /* Itt tárolhatod a térkép koordinátáit */ }
+  },
+  "via-naturae": {
+    title: "Via Naturae", 
+    description: "A természet világa", 
+    icon: "🍃", 
+    disabled: false
+  },
+  "via-domorum": {
+    title: "Via Domorum", 
+    description: "Az otthon világa", 
+    icon: "🏡", 
+    disabled: false 
+  },
+  "via-corporum": {
+    title: "Via Corporum", 
+    description: "Az emberi test világa", 
+    icon: "👀", 
+    disabled: false 
+  },
+  "via-astrae": {
+    title: "Via Astrae", 
+    description: "A csillagok, csillagképek világa", 
+    icon: "✨", 
+    disabled: false 
+  },
+  "via-historiae": {
+    title: "Via Historiae", 
+    description: "Hamarosan...", 
+    icon: "📜", 
+    disabled: false 
+  },
+
 };

@@ -1,0 +1,15 @@
+{
+  "worldId": "via-linguae",
+  "chapters": [
+    {
+      "id": "abc",
+      "title": "Az ábécé",
+      "content": "### A finn ábécé\nItt jön a részletes leírás..."
+    },
+    {
+      "id": "szamok",
+      "title": "Számok 1-10-ig",
+      "content": "1: yksi, 2: kaksi..."
+    }
+  ]
+}

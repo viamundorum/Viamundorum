@@ -19,13 +19,15 @@ export default function Navbar() {
 
   return (
     <header>
+      <Link href="/worlds" style={{ textDecoration: 'none', color: 'inherit' }}>
+    
       <h1>Via Mundorum</h1>
-      
+      </Link>
       <nav>
         <Link href="/">Kezdőlap</Link>
         <Link href="/worlds">Világok</Link>
         <Link href="/auth">Bejelentkezés</Link>
-        <Link href="/kapcsolat">Kapcsolat</Link>
+        <Link href="/feedback">Kapcsolat</Link>
       </nav>
 
       {/* Fontos: a div helyett form-ot használunk, hogy az Enter gomb is működjön! */}

@@ -12,7 +12,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="hu">
-      <body>
+      {/* A stílus attribútummal alapértelmezett színeket adunk meg */}
+      <body style={{ 
+        '--current-header-bg': 'var(--header-bg)',
+        '--current-footer-bg': 'var(--footer-bg)',
+        '--current-main-bg': 'var(--main-bg)',
+        '--current-accent': 'var(--accent)'
+      }}>
         <Navbar />
         <main>{children}</main>
         <Footer />
