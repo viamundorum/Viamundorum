@@ -21,12 +21,11 @@ export const worldsData = {
     title: "Via Linguae", 
     description: "A nyelvek világa", 
     icon: "🌏", 
-    disabled: false ,
-    lessons: [
-      { id: "alapok", title: "Alapvető kifejezések", content: "Itt kezdődik a nyelvtanulás..." },
-      { id: "nyelvtan", title: "Mondatszerkezet", content: "A mondatok felépítése..." }
-    ],
-    mapData: { /* Itt tárolhatod a térkép koordinátáit */ }
+    disabled: false,
+    color: "#7a1f2b",
+    accent: "#ffd700",
+    bgGradient: "linear-gradient(135deg, #7a1f2b 0%, #2b0a0d 100%)",
+    mapData: {} // A játékhoz marad, a lessons pedig ment a JSON-be!
   },
   "via-naturae": {
     title: "Via Naturae", 

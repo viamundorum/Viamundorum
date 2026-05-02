@@ -841,6 +841,47 @@ footer {
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
+/* =============================
+   EGYSÉGESÍTETT STÍLUS
+============================== */
+/*
+header {
+  background: var(--world-main); Itt nem mondjuk meg, milyen színű, csak hogy a 'world-main' változót használja 
+  color: var(--world-accent);
+}
+
+nav a {
+  color: var(--world-accent);
+}
+
+main {
+  background: var(--world-bg);
+}
+
+footer {
+  background: var(--world-main);
+  color: var(--world-accent);
+}*/
+
+/* A gomb alaphelyzetben */
+.sidebar-button {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  transition: background-color 0.3s ease;
+}
+
+/* A gomb hover állapotban */
+.sidebar-button:hover {
+  /* Itt a trükk: a világonként változó hover változót használjuk! */
+  background-color: var(--button-hover-bg);
+  color: var(--accent-hover);
+}
+
+/* Tartalomjegyzék linkjei */
+.nav-link:hover {
+  color: var(--accent-hover);
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
 
 /* =============================
    GOMBSZÍNEK (Tanulás / Játék)
