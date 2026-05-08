@@ -15,26 +15,34 @@ export default function StudyPage({ params }) {
 
   useEffect(() => {
     if (world) {
-      const root = document.body;
+      const body = document.body;
       const headerTitle = document.querySelector('header h1');
       const originalTitle = "Via Mundorum";
 
-      root.style.setProperty('--current-header-bg', world.color);
-      root.style.setProperty('--current-footer-bg', world.color);
-      root.style.setProperty('--current-main-bg', world.bgGradient);
-      root.style.setProperty('--current-accent', world.accent);
+      // 1. Ugyanazt az osztályt adjuk hozzá, mint a Világ oldalon!
+      body.classList.add(id);
+
+      // Opcionális: Ha mégis kellenek az egyedi változók, maradhatnak, 
+      // de az osztály hozzáadása a kulcs a global.css miatt.
+      body.style.setProperty('--current-header-bg', world.color);
+      body.style.setProperty('--current-footer-bg', world.color);
+      body.style.setProperty('--current-main-bg', world.bgGradient);
+      body.style.setProperty('--current-accent', world.accent);
 
       if (headerTitle) headerTitle.innerText = world.title;
 
       return () => {
-        root.style.removeProperty('--current-header-bg');
-        root.style.removeProperty('--current-footer-bg');
-        root.style.removeProperty('--current-main-bg');
-        root.style.removeProperty('--current-accent');
+        // Takarítás kilépéskor
+        body.classList.remove(id);
+        
+        body.style.removeProperty('--current-header-bg');
+        body.style.removeProperty('--current-footer-bg');
+        body.style.removeProperty('--current-main-bg');
+        body.style.removeProperty('--current-accent');
         if (headerTitle) headerTitle.innerText = originalTitle;
       };
     }
-  }, [world]);
+  }, [world, id]); // Fontos: az id-t is vedd fel a függőségi listába!
 
   if (!world || !lessonData) return notFound();
 

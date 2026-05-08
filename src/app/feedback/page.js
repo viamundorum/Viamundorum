@@ -1,5 +1,8 @@
 "use client";
 
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+
 export default function KapcsolatPage() {
   return (
     <>
@@ -32,12 +35,13 @@ export default function KapcsolatPage() {
 
         {/* Jobb oszlop: Az űrlap */}
         <div className="contact-form-box">
-          <form action="#" method="POST">
+          {/* JAVÍTOTT RÉSZ: Az action mezőbe bekerült az egyedi Formspree azonosítód */}
+          <form action="https://formspree.io/f/xaqvpoeo" method="POST">
             <label htmlFor="name">Név (opcionális)</label>
             <input name="name" type="text" id="name" placeholder="Kovács Anna Mariann" />
 
-            <label htmlFor="email">Email (opcionális)</label>
-            <input name="email" type="email" id="email" placeholder="email@example.com" />
+            <label htmlFor="email">Email (kötelező)</label>
+            <input name="email" type="email" id="email" placeholder="email@example.com" required/>
 
             <label htmlFor="subject">Tárgy</label>
             <select id="subject" name="subject" defaultValue="egyeb">
@@ -55,8 +59,10 @@ export default function KapcsolatPage() {
               required
             ></textarea>
 
-            <input type="submit" value="Üzenet küldése" />
+            {/* Extra beállítások a Formspree-hez */}
             <input type="hidden" name="_subject" value="Via Mundorum Kapcsolat" />
+            
+            <input type="submit" value="Üzenet küldése" />
           </form>
         </div>
       </section>

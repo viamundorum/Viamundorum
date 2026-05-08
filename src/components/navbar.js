@@ -26,7 +26,7 @@ export default function Navbar() {
       <nav>
         <Link href="/">Kezdőlap</Link>
         <Link href="/worlds">Világok</Link>
-        <Link href="/auth">Bejelentkezés</Link>
+      {/*  <Link href="/auth">Bejelentkezés</Link> */}
         <Link href="/feedback">Kapcsolat</Link>
       </nav>
 

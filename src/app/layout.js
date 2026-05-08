@@ -1,3 +1,4 @@
+import Script from 'next/script' // 1. Ezt importáld felül
 import "./globals.css";
 
 // A @ helyett próbáld meg relatív útvonallal (két pont visszalépést jelent):
@@ -19,6 +20,14 @@ export default function RootLayout({ children }) {
         '--current-main-bg': 'var(--main-bg)',
         '--current-accent': 'var(--accent)'
       }}>
+
+        {/* GoatCounter követőkód */}
+        <Script 
+        strategy="afterInteractive"
+        data-goatcounter="https://viamundorum.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"/>
+
+
         <Navbar />
         <main>{children}</main>
         <Footer />
