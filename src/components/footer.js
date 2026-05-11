@@ -4,8 +4,9 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-links">
-        <Link href="/project">Rólunk</Link>
-        <Link href="/demo">Demo</Link>
+        <Link href="/gdpr">Adatkezelési tájékoztató</Link>
+        <Link href="/aszf">Felhasználási Feltételek</Link>
+        <Link href="/project">Impresszum</Link>
       {/*  <Link href="/qr_code">QR kód</Link> */}
       </div>
       <p>© {new Date().getFullYear()} Via Mundorum</p>

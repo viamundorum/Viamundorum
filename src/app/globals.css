@@ -225,7 +225,7 @@ main {
 
 /* A cím - Kisebb, mint az idézet */
 .intro h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   opacity: 0.9;
   margin-bottom: 15px;
   color: var(--main-color);
@@ -328,6 +328,18 @@ main {
     text-align: center;
   }
 }
+
+.gdpr {
+  text-align: left;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.gdpr h2 {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
 
 /* =========================
    VILÁG KÁRTYÁK
@@ -679,6 +691,90 @@ main {
   margin-bottom: 15px;
   border: 1px solid #ccc !important;
   color: #333;
+}
+
+/* A fő tároló */
+.info-about-container {
+  display: flex;
+  flex-wrap: wrap; /* Hogy mobilon egymás alá ugorjanak */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5%;                 /* Százalékos hézag a rugalmasságért */
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 0 20px;
+  align-items: flex-start;
+  flex-direction: row; /* Egymás mellett legyenek */
+}
+
+/* Bal oszlop: Adatok (Vékonyabb, fix arány) */
+.info-box {
+  flex: 0 0 30%;           /* Pontosan az oldal 30%-át foglalja el */
+  min-width: 300px;        /* De ne legyen olvashatatlanul keskeny */
+  max-width: 400px;
+  color: #010152 !important;/* Vagy a dizájnodhoz illő szín */  
+  background: var(--surface) !important;
+  padding: 2rem;  /* Átvesszük az auth-box-log stílusait--> padding: 30px; */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    
+  /* Ez akadályozza meg az összecsúszást */
+  box-sizing: border-box;
+}
+
+/* Jobb oszlop: Bemutatkozás (Szélesebb és sorkizárt) */
+.about-box {
+  flex: 0 0 65%;           /* Pontosan az oldal 65%-át foglalja el */
+  text-align: justify;     /* SORKIZÁRT szöveg */
+  hyphens: auto;           /* Segít a szavak elválasztásában sorkizártnál */
+}
+.info-about {
+  margin-bottom: 40px;
+}
+.info-about h3, .about-box h3 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* Címsorok igazítása (Sorkizárt szövegnél a címek maradjanak balra) */ 
+.about-box h4 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* --- Adatok belső elrendezése (Hogy ne törjön sort a dt/dd) --- */
+
+.info-about dl div {
+  display: flex;
+  margin-bottom: 8px;
+  text-align: left;        /* Az adatok maradjanak balra zártak */
+}
+
+.info-about dt {
+  flex: 0 0 100px;         /* Fix hely a címkéknek */
+  font-weight: bold;
+}
+
+.info-about dd {
+  margin-left: 20px; /* Ezzel tolod beljebb az adatot */
+  margin-bottom: 10px; /* Egy kis hely a következő sor előtt */
+  flex: 1;
+}
+.server-info {
+  margin-top: 20px;
+}
+/* Biztosíték a strong elemekre */
+strong {
+  display: inline !important;
+}
+.signature {
+  text-align: right; /* Ez jobbra tolja a szöveget a dobozon belül */
+  margin-top: 2rem;  /* Egy kis távolság a felette lévő szövegtől */
+}
+
+.signature p {
+  margin: 0;         /* Hogy ne legyen túl nagy rés a név és a beosztás között */
+  text-align: right; /* Sorkizárt szülő esetén is jobbra kényszeríti */
 }
 
 /* Mobilos nézet: ha nem férnek el egymás mellett, ugorjanak egymás alá */

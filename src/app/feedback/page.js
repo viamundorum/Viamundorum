@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import StaticEmail from '@/components/staticemail'; // Feltételezve, hogy külön fájlba tetted
 import { useForm, ValidationError } from '@formspree/react';
 
 export default function KapcsolatPage() {
@@ -19,7 +20,7 @@ export default function KapcsolatPage() {
           
           <div className="info-item">
             <strong>E-mail:</strong>
-            <p>viamundorum@gmail.com</p>
+            <p><StaticEmail /></p>
           </div>
 
           <div className="info-item">
