@@ -682,7 +682,7 @@ main {
 .contact-form-box h3 {
   margin-bottom: 1.5rem;
   color: #010152;
-  align-items: center;
+  text-align: center;
   font-weight: bold;
 }
 
