@@ -1,0 +1,20 @@
+{
+  "worldId": "via-viridorum",
+  "chapters": [
+    {
+      "id": "bevezetes",
+      "title": "Az újrahasznosítás",
+      "content": "### Itt jön a részletes leírás..."
+    },
+    {
+      "id": "kukak",
+      "title": "Szelektív kukák",
+      "content": "Tartalom..."
+    },
+    {
+      "id": "jelolesek",
+      "title": "Jelölések",
+      "content": "Tartalom..."
+    }
+  ]
+}

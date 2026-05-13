@@ -1,19 +1,20 @@
 "use client";
 
 import Link from 'next/link';
+import { useState, use , useLayoutEffect} from 'react'; // useEffect helyett
 import { worldsData } from '../../../data/worlds';
 import { notFound } from 'next/navigation';
-import { useEffect, use } from 'react';
 
 export default function WorldPage({ params }) {
   const unwrappedParams = use(params);
   const id = unwrappedParams.id;
   const world = worldsData[id];
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (world) {
       const root = document.documentElement; // A html elem
       const body = document.body;
+      body.classList.add(id);
       const headerTitle = document.querySelector('header h1');
       const originalTitle = "Via Mundorum";
 

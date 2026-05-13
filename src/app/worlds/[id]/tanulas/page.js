@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, use, useEffect } from 'react';
+import { useState, use, useLayoutEffect } from 'react'; // useEffect helyett
 import { worldsData } from '@/data/worlds';
 import { allLessons } from '@/data/lessons/index';
 import { notFound } from 'next/navigation';
@@ -13,7 +13,7 @@ export default function StudyPage({ params }) {
   
   const [activeChapter, setActiveChapter] = useState(lessonData?.chapters[0] || null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (world) {
       const body = document.body;
       const headerTitle = document.querySelector('header h1');
