@@ -69,22 +69,26 @@ export default function ProjectPage() {
 
           <section className="info-item">
             <p>A platform tudományos alapjait az Eszterházy Károly Katolikus Egyetemen folytatott 
-              tanulmányaim és az Óbudai Egyetem (ÓE RKK) konferenciáján publikálandó munkám adják: 
-              <em>„A megújuló energiaforrások matematikája: képletgyűjtemény és példatár”</em>. A kutatás során 
-              <strong> Mika János</strong> és <strong>Oláhné Téglási Ilona</strong> szakmai mentorálása segítette a tartalom elmélyítését. 
-              Bár a publikált képletgyűjtemény a megújuló energiaforrások matematikájára fókuszál, 
+              tanulmányaim és az Óbudai Egyetem (ÓE RKK) 2026 Projektkonferenciáján publikálandó munkám adják:
+              <em> „Matematikai képletek és példatár a megújuló energiaforrások témakörében”</em>. A kutatás során 
+              <strong> Mika János</strong> és <strong>Oláhné Téglási Ilona</strong> szakmai mentorálása segítette a tartalom elmélyítését.</p>
+          </section>
+
+          <section className="info-item">
+            <p>A projekt a konferencia hitvallásához csatlakozva a fenntarthatóságot <strong>élő kompetenciaként</strong> kezeli, 
+              lebontva a <strong>falakat az oktatási szintek</strong> között. Bár a publikált képletgyűjtemény a megújuló energiaforrások matematikájára fókuszál, 
               a Via Mundorum világa ennél jóval tágabb: a természettudományoktól a sakk logikáján át 
               a humán ismeretekig több „út” (Via) nyílik meg a látogatók előtt.</p>
           </section>
 
           <section className="info-item">
-            <p>A célom egy olyan digitális univerzum felépítése, ahol a fenntartható jövő technológiái 
-              mindenki számára átláthatóvá és tanulhatóvá válnak. A Via Mundorum jelenleg egy „egyszemélyes hadsereg” 
-              fejlesztéseként épül: egy folyamatosan bővülő, tudományos igényű játéktér, 
-              ahol a tudás megszerzése valódi kaland.</p>
+            <p>A célom egy olyan tudástér felépítése, ahol a fenntartható jövő technológiái 
+              mindenki számára átláthatóvá és tanulhatóvá válnak. A Via Mundorum digitális univerzuma egy folyamatosan bővülő 
+              tudományos igényű játéktér, ahol a tudás megszerzése <strong>valódi kaland</strong>.</p>
           </section>
 
           <section className="info-item">
+            <p>Hiszem, hogy a <strong>jövőt nemcsak tanítani kell, hanem közösen felépíteni</strong>.</p>
             <p>Tarts velem a felfedezésben!</p>
           </section>
 

@@ -52,7 +52,7 @@ export default function GDPRPage() {
     <section className="gdpr">
         <h2>6. Adatfeldolgozók</h2>
         <p>Az adatkezelés során az alábbi szolgáltatókat vesszük igénybe, akik a technikai hátteret biztosítják:</p>
-        <ul list-disc list-inside>
+        <ul className="list-disc list-inside">
             <li>Tárhelyszolgáltató: Vercel Inc. (440 N Barranca Ave #4133, Covina, CA 91723, USA)</li>
             <li>Levelezőrendszer: Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Írország) 
                 – a <SafeEmail /> címre érkező üzenetek kezelése.</li>
@@ -66,7 +66,7 @@ export default function GDPRPage() {
             <li>Közvetlen panasz: Írjon nekünk a <SafeEmail /> e-mail címre.</li>
             <li>Hatósági jogorvoslat: Ön jogosult eljárást kezdeményezni a Nemzeti Adatvédelmi 
                 és Információszabadság Hatóságnál (Cím: 1530 Budapest, Pf.: 5., 
-                e-mail: <NaihEmail />, honlap: www.naih.hu).</li>
+                e-mail: <NaihEmail />, honlap: <Link href="https://naih.hu">www.naih.hu</Link>).</li>
             <li>Bírósági út: Ön jogosult jogainak megsértése esetén bírósághoz fordulni.</li>
         </ul>
 

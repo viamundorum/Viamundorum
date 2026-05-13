@@ -36,6 +36,7 @@ export default function KapcsolatPage() {
 
         {/* Jobb oszlop: Az űrlap */}
         <div className="contact-form-box">
+          <h3>Vélemény</h3>
           {/* JAVÍTOTT RÉSZ: Az action mezőbe bekerült az egyedi Formspree azonosítód */}
           <form action="https://formspree.io/f/xaqvpoeo" method="POST">
             <label htmlFor="name">Név (opcionális)</label>

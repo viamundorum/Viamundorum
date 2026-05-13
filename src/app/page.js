@@ -12,8 +12,8 @@ export default function HomePage() {
         {/* Alatta a többi információ kisebb méretben */}
         <h1>Üdvözlünk a Via Mundorum világában!</h1>
         <p className="hero-subtitle">
-          Fedezd fel a tudás útjait, ahol a tanulás nem kényszer, hanem kaland. 
-          Tanulj világokon keresztül, fedezd fel a természetet, a nyelveket vagy akár a sakk rejtelmeit.
+          Fedezd fel a tudás útjait, ahol a tanulás nem kényszer, hanem kaland! 
+          Tanulj világokon keresztül, fedezd fel a természetet, a nyelveket vagy akár a sakk rejtelmeit!
         </p>
         
       </section>
