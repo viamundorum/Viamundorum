@@ -4,27 +4,59 @@
     {
       "id": "bevezetes",
       "title": "A nyelvek",
-      "content": "### A finn ábécé\nItt jön a részletes leírás..."
+      "content": "### Betűk-hangok\nItt jön a részletes leírás..."
     },
     {
       "id": "hangtan",
       "title": "Hangtan",
-      "content": "Tartalom..."
+      "content": "Hamarosan...",
+      "subchapters": [
+        {
+          "id": "hangtan-bev",
+          "title": "A levegő útja",
+          "content": "A tüdőből kiáramló levegő a légcsövön kersztül, a garatüregben lévő hangszalagokat érintve, a gégefőnél két irányba távozhat: az orrüregen, vagy a szájüregen át."
+        },
+        {
+          "id": "hangszalag",
+          "title": "Hangszalak",
+          "content": "Tartalom..."
+        },
+        {
+          "id": "orr",
+          "title": "Orrüreg",
+          "content": "Tartalom..."
+        },
+        {
+          "id": "szaj",
+          "title": "Szájüreg",
+          "content": "Tartalom..."
+        },
+        {
+          "id": "mgh",
+          "title": "Magánhangzók",
+          "content": "Tartalom..."
+        },
+        {
+          "id": "msh",
+          "title": "Mássalhangzók",
+          "content": "Tartalom..."
+        }
+      ]
     },
     {
       "id": "alaktan",
       "title": "Alaktan",
-      "content": "Tartalom..."
+      "content": "Hamarosan..."
     },
     {
       "id": "szófajtan",
       "title": "Szófajtan",
-      "content": "Tartalom..."
+      "content": "Hamarosan..."
     },
     {
       "id": "mondattan",
       "title": "Mondattan",
-      "content": "Tartalom..."
+      "content": "Hamarosan..."
     }
   ]
 }

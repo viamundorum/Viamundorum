@@ -4,32 +4,45 @@
     {
       "id": "bevezetes",
       "title": "Megújuló energiaforrások",
-      "content": "A megújuló energiaforrások olyan természetes eredetű energiák, amelyek természetes folyamatok révén folyamatosan megújulnak, így hosszú távon is fenntarthatók. Fajtái: bioenergia, geotermikus energia, nap-, szél-, és vízenergia."
-    },
+      "content": "A megújuló energiaforrások olyan természetes eredetű energiák, amelyek természetes folyamatok révén folyamatosan megújulnak, így hosszú távon is fenntarthatók.\nFajtái: bioenergia, geotermikus energia, nap-, szél-, és vízenergia.",
+      "subchapters": [
     {
       "id": "bio",
       "title": "Bioenergia",
-      "content": "A bioenergia a növények, állati hulladékok és egyéb szerves anyagok elégetésével vagy biológiai lebontásával előállított energiaforma. Ez az egyik legrégebbi energiatermelési módszer, amelyet már az emberiség kezdetétől fogva használnak. A bioenergia forrásai közé tartoznak a mezőgazdasági hulladékok, faapríték, trágya, kommunális szerves hulladék és energiaültetvények."
+      "content": "A bioenergia a növények, állati hulladékok és egyéb szerves anyagok elégetésével vagy biológiai lebontásával előállított energiaforma. \nEz az egyik legrégebbi energiatermelési módszer, amelyet már az emberiség kezdetétől fogva használnak. \nA bioenergia forrásai közé tartoznak a mezőgazdasági hulladékok, faapríték, trágya, kommunális szerves hulladék és energiaültetvények."
     },
     {
       "id": "geo",
       "title": "Geotermikus energia",
-      "content": "A geotermikus energia2 a Föld belső hőjéből származik, amely a bolygó keletkezése óta felhalmozódott hőenergia, illetve a radioaktív bomlás következtében folyamatosan termelődik. Ez az energiaforrás hosszú távon fenntartható, és számos alkalmazási lehetőséget kínál, különösen olyan területeken, ahol a geológiai adottságok kedvezőek."
+      "content": "A geotermikus energia a Föld belső hőjéből származik, amely a bolygó keletkezése óta felhalmozódott hőenergia, illetve a radioaktív bomlás következtében folyamatosan termelődik. \nEz az energiaforrás hosszú távon fenntartható, és számos alkalmazási lehetőséget kínál, különösen olyan területeken, ahol a geológiai adottságok kedvezőek."
     },
     {
       "id": "nap",
       "title": "Napenergia",
-      "content": "A napenergia a Napból érkező elektromágneses sugárzás formájában elérhető energia, amelyet különféle technológiák segítségével villamos és hőenergiává lehet alakítani. Ez az egyik legnagyobb potenciállal rendelkező megújuló energiaforrás, mivel a Földre érkező napsugárzás mennyisége messze meghaladja az emberiség éves energiaigényét."
+      "content": "A napenergia a Napból érkező elektromágneses sugárzás formájában elérhető energia, amelyet különféle technológiák segítségével villamos és hőenergiává lehet alakítani. \nEz az egyik legnagyobb potenciállal rendelkező megújuló energiaforrás, mivel a Földre érkező napsugárzás mennyisége messze meghaladja az emberiség éves energiaigényét."
     },
     {
       "id": "szel",
       "title": "Szélenergia",
-      "content": "A szélenergia a légmozgások — vagyis a szél – mozgási energiáját hasznosítja. A szelet a Föld légkörének felmelegedése, a felszín különböző hőkapacitása és a Föld forgása idézi elő — vagyis a Napból származó energia közvetett formája. A szélenergia átalakítása villamos energiává szélturbinák segítségével történik."
+      "content": "A szélenergia a légmozgások — vagyis a szél – mozgási energiáját hasznosítja. A szelet a Föld légkörének felmelegedése, a felszín különböző hőkapacitása és a Föld forgása idézi elő — vagyis a Napból származó energia közvetett formája. \nA szélenergia átalakítása villamos energiává szélturbinák segítségével történik."
     },
     {
       "id": "viz",
       "title": "Vízenergia",
-      "content": "A vízenergia a Föld egyik legősibb és legmegbízhatóbb megújuló energiaforrása, amely a víz mozgási energiáját alakítja át villamos energiává vagy mechanikai munkává. Az energiatermelés alapja a víz körforgása, amelyet a Nap hajt: a víz elpárolog, felhőkké alakul, majd csapadék formájában visszakerül a felszínre, ahol folyókba, tavakba és tengerekbe áramlik."
+      "content": "A vízenergia a Föld egyik legősibb és legmegbízhatóbb megújuló energiaforrása, amely a víz mozgási energiáját alakítja át villamos energiává vagy mechanikai munkává. \nAz energiatermelés alapja a víz körforgása, amelyet a Nap hajt: a víz elpárolog, felhőkké alakul, majd csapadék formájában visszakerül a felszínre, ahol folyókba, tavakba és tengerekbe áramlik."
     }
+      ]
+    },
+    {
+      "id": "elony",
+      "title": "Előnyök",
+      "content": "Hamarosan..."
+    },
+    {
+      "id": "hatrany",
+      "title": "Hátárnyok",
+      "content": "Hamarosan..."
+    }
+
   ]
 }

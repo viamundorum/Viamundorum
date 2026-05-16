@@ -8,7 +8,7 @@ export default function ASZFPage() {
         <h1>Felhasználási feltételek</h1>
 </section>   
 <section className="gdpr">
-    Hatályos: 2026. május 11-től visszavonásig.
+    Hatályos: 2026. május 15-től visszavonásig.
 </section>       
     <section className="gdpr">
         <h2>1. Általános rendelkezések</h2>

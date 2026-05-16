@@ -23,7 +23,7 @@ export default function HomePage() {
     🌍 Belépés a Világokba
   </Link>
   
-  <Link href="/project" className="cta-secondary">
+  <Link href="/concept" className="cta-secondary">
     ℹ️ Mi ez az egész?
   </Link>
 </div>

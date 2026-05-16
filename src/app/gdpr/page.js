@@ -9,12 +9,12 @@ export default function GDPRPage() {
         <h1>Adatkezelési tájékoztató</h1>
 </section>  
 <section className="gdpr">
-    Hatályos: 2026. május 11-től visszavonásig.
+    Hatályos: 2026. május 15-től visszavonásig.
 </section>      
     <section className="gdpr">
         <h2>1. Általános rendelkezések</h2>
         <p>Jelen Adatkezelési Tájékoztató kiterjed a Pesák Dóra Zita (a továbbiakban: Adatkezelő) 
-            által üzemeltetett viamundorum.vercel.app weboldalra és annak összes aloldalára. 
+            által üzemeltetett viamundorum.hu weboldalra és annak összes aloldalára. 
             A honlap látogatója (a továbbiakban: Felhasználó) a honlap látogatásával egyben 
             elfogadja a jelen tájékoztatóban foglaltakat.
         </p>
@@ -59,7 +59,84 @@ export default function GDPRPage() {
         </ul>
     </section>
     <section className="gdpr">
-        <h2>7. Jogorvoslati lehetőségek</h2>
+        <h2>7. Sütik (Cookie-k) kezelése és a Cookiebot használata</h2>
+        <ol className="list-decimal list-inside">
+            <li>A sütikről általában:</li>
+            <ul className="list-disc list-inside">
+            <li>A honlap a jobb felhasználói élmény, a weboldal biztonságos működése, valamint 
+                a látogatottsági statisztikák elemzése érdekében kis adatfájlokat, úgynevezett 
+                sütiket (cookie-kat) helyez el a Felhasználó számítógépén vagy mobileszközén.</li>
+            </ul>
+            <li>A Cookiebot rendszer használata:</li>
+            <ul className="list-disc list-inside">
+            <li>A weboldal a sütikhez való hozzájárulások kezelésére, naplózására és a sütik automatikus 
+                blokkolására a Cookiebot (Usercentrics A/S, Havnegade 39, 1058 Copenhagen, Dánia) szolgáltatását 
+                használja. A Cookiebot biztosítja, hogy a nem feltétlenül szükséges (statisztikai, marketing, 
+                funkcionális) sütik mindaddig ne töltődjenek be és ne gyűjtsenek adatot, amíg a Felhasználó ehhez 
+                kifejezett hozzájárulását nem adja az oldalon megjelenő süti-sávban (Consent Banner).</li>
+            </ul>
+            <li>A kezelt adatok köre és jogalapja:</li>
+            <ul className="list-disc list-inside">
+                <li>Szükséges (alapműködést biztosító) sütik: Jogalapja az elektronikus kereskedelmi 
+                    szolgáltatásokról szóló törvény (Ektv.) 13/A. § (3) bekezdése (a szolgáltatás 
+                    biztosításához technikailag elengedhetetlen).</li>
+                <li>Statisztikai, funkcionális és marketing sütik: Jogalapja a Felhasználó önkéntes, 
+                    kifejezett hozzájárulása a GDPR 6. cikk (1) bekezdés a) pontja alapján.</li>
+            </ul>
+            <li>A hozzájárulás módosítása és visszavonása:</li>
+            <ul className="list-disc list-inside">
+            <li>A Felhasználó a sütikre vonatkozó döntését (hozzájárulását) bármikor ingyenesen megváltoztathatja 
+                vagy visszavonhatja a weboldal láblécében található Cookie-nyilatkozat linken keresztül, 
+                vagy a böngészője beállításaiban a sütik törlésével.</li>
+            </ul>
+            <li>Automatikus süti-kimutatás:</li>
+            <ul className="list-disc list-inside">
+            <li>A Cookiebot havonta egyszer automatikusan pásztázza a weboldalt, és frissíti a sütik pontos 
+                listáját, azok lejárati idejét és célját. A mindenkor aktuális, részletes süti-lista és 
+                azok technikai leírása közvetlenül a süti-kezelő ablakban érhető el a Felhasználók számára.</li>
+            </ul>
+        </ol>
+    </section>
+    <section className="gdpr">
+        <h2>8. Mérő- és analitikai eszközök, címkekezelés (GTM, GA4, Microsoft Clarity)</h2>
+        <p>A weboldal a látogatottsági statisztikák elemzése, a felhasználói élmény optimalizálása, 
+            valamint a hibák felderítése érdekében külső szolgáltatók mérőkódjait és sütijeit (cookie-kat) 
+            használja. Ezeket az eszközöket az Adatkezelő központosítva, a Google Tag Manager rendszeren 
+            keresztül vezérli.</p>
+        <ol className="list-decimal list-inside">
+            <li>Google Tag Manager (GTM)</li>
+            <ul className="list-disc list-inside">
+                <li><strong>Szolgáltató</strong>: Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Írország).</li>
+                <li><strong>Az adatkezelés célja</strong>: A weboldalba épített különböző mérőkódok (címkék) központi kezelése, 
+                    aktiválása és finomhangolása. Maga a GTM rendszer sütiket nem helyez el és személyes 
+                    adatokat nem gyűjt, csupán más címkék beöltődését vezérli.</li>
+                <li><strong>Jogalap</strong>: Az Adatkezelő jogos érdeke a weboldal technikai, üzembiztos és 
+                strukturált működtetéséhez (GDPR 6. cikk (1) bek. f) pont).</li>
+            </ul>
+            <li>Google Analytics 4 (GA4)</li>
+            <ul className="list-disc list-inside">
+                <li><strong>Szolgáltató</strong>: Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Írország).</li>
+                <li><strong>Az adatkezelés célja</strong>: Anonimizált statisztikai adatok gyűjtése a weboldal látogatottságáról 
+                (pl. oldalon eltöltött idő, megtekintett világok száma, kattintások, földrajzi régió). Az Adatkezelő a 
+                GA4-ben az IP-cím anonimizálást aktiválta, így a látogatók közvetlen azonosítására nincs lehetőség.</li>
+                <li><strong>Jogalap</strong>: A Felhasználó önkéntes és kifejezett hozzájárulása (GDPR 6. cikk (1) bek. a) pont). 
+                A kód csak akkor lép működésbe, ha a Felhasználó a Cookiebot felületén jóváhagyja a „Statisztikai” sütik használatát.</li>
+            </ul>
+            <li>Microsoft Clarity</li>
+            <ul className="list-disc list-inside">
+                <li><strong>Szolgáltató</strong>: Microsoft Corporation (One Microsoft Way, Redmond, WA 98052-6399, USA).</li>
+                <li><strong>Az adatkezelés célja</strong>: A felhasználói élmény és a weboldal dizájnjának javítása. A szolgáltatás 
+                segít elemző hőtérképek (heatmaps) generálásában, valamint anonim módon rögzíti a képernyő-interakciókat 
+                (pl. egérmozgás, görgetés), amellyel feltárhatók az esetleges fejlesztési hibák vagy az oldal nehezen kezelhető részei.</li>
+                <li><strong>Jogalap</strong>: A Felhasználó önkéntes és kifejezett hozzájárulása (GDPR 6. cikk (1) bek. a) pont). 
+                A kód betöltése mindaddig blokkolva van, amíg a Felhasználó a Cookiebot felületén hozzá nem járul a 
+                statisztikai/funkcionális sütik futtatásához.</li>
+            </ul>
+        </ol>
+    </section>
+
+    <section className="gdpr">
+        <h2>9. Jogorvoslati lehetőségek</h2>
         <p>Mindent megteszünk, hogy személyes adatait biztonságban kezeljük. Amennyiben mégis panasza 
             lenne, az alábbi módokon teheti meg:</p>
         <ul className="list-disc list-inside">
