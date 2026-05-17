@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import SafeEmail from '@/components/safeemail'; // Feltételezve, hogy külön fájlba tetted
+import SafeEmail from '@/components/safeemail';
 
 export default function ProjectPage() {
   return (
@@ -9,96 +9,82 @@ export default function ProjectPage() {
       </section>
 
       <section className="info-about-container">
-
-        {/* Bal oszlop: Adatok */}
-        {/* Bal oszlop: Hivatalos adatok (Szemantikus DL használatával) */}
-        <aside className="info-box" style={{ flex: 1 }}>
-          <section className="info-about">
-            <h3>Üzemeltető adatai</h3>
-            <dl>
-              <dt><strong>Név:</strong></dt>
-              <dd>Pesák Dóra Zita</dd>
-              
-              <dt><strong>Székhely:</strong></dt>
-              <dd>2030 Érd, Szép Ilonka utca 4/A</dd>
-              
-              <dt><strong>E-mail:</strong></dt>
-              <dd><SafeEmail /></dd> {/* Itt a biztonságos megoldás */}
-            </dl>
-          </section>
-
-          <section className="info-about">
-            <h3>Tárhelyszolgáltató adatai</h3>
-            <dl>
-              <dt><strong>Név:</strong></dt>
-              <dd>Vercel Inc.</dd>
-              
-              <dt><strong>Cím:</strong></dt>
-              <dd>440 N Barranca Ave #4133, Covina, CA 91723, USA</dd>
-              
-              <dt><strong>E-mail:</strong></dt>
-              <dd>support@vercel.com</dd>
-              
-              <dt><strong>Web:</strong></dt>
-              <dd>
-                <Link href="https://vercel.com" target="_blank">https://vercel.com</Link>
-              </dd>
-            </dl>
-          </section>
-
-          <p className="server-info">
-            <em>A tárhelyszolgáltató szerverei az Amerikai Egyesült Államokban találhatóak.</em>
-          </p>
-        </aside>
-
-        {/* Jobb oszlop: Rólam */}
-        <aside className="about-box" style={{ flex: 2 }}>
-          <h3>Bemutatkozás</h3>
+        {/* Ez az info-box a fő rács (grid), ami összefogja a 3 kártyát */}
+        <aside className="info-box">
           
-          <section className="info-item">
-            <h4>Üdvözöllek!</h4>
+          {/* 1. KÁRTYA */}
+          <section className="info-about">
+            <h3>1. Üzemeltető adatai</h3>
+            <dl>
+              <div>
+                <dt><strong>Név:</strong></dt>
+                <dd>Pesák Dóra Zita</dd>
+              </div>
+              <div>
+                <dt><strong>Székhely:</strong></dt>
+                <dd>2030 Érd, Szép Ilonka <span style={{ whiteSpace: 'nowrap' }}>utca 4/A</span></dd>
+              </div>
+              <div>
+                <dt><strong>E-mail cím:</strong></dt>
+                <dd><SafeEmail /></dd>
+              </div>
+            </dl>
           </section>
 
-          <section className="info-item">
-            <p>A <strong>Via Mundorum</strong> koncepciója abból a felismerésből született, hogy a különböző 
-              tudományterületek – legyen szó a nyelvtan logikájáról, a természet törvényszerűségeiről 
-              vagy a matematika elvont világáról – közös nyelven beszélnek, ha azokat rendszerszinten 
-              és interaktívan közelítjük meg. A célom egy olyan <strong>interdiszciplináris oktatási univerzum</strong> létrehozása, 
-              ahol a tudás nem tantárgyakra szabdalt, hanem egy összefüggő, felfedezhető hálózat.</p>
+          {/* 2. KÁRTYA */}
+          <section className="info-about">
+            <h3>2. Tárhelyszolgáltató adatai</h3>
+            <dl>
+              <div>
+                <dt><strong>Név:</strong></dt>
+                <dd>Vercel Inc.</dd>
+              </div>
+              <div>
+                <dt><strong>Székhely:</strong></dt>
+                <dd>440 N Barranca Ave #4133, Covina, CA 91723, USA</dd>
+              </div>
+              <div>
+                <dt><strong>E-mail cím:</strong></dt>
+                <dd>support@vercel.com</dd>
+              </div>
+              <div>
+                <dt><strong>Web:</strong></dt>
+                <dd>
+                  <Link href="https://vercel.com" target="_blank">https://vercel.com</Link>
+                </dd>
+              </div>
+            </dl>
+            <p className="server-info">
+              <em>A tárhelyszolgáltató szerverei az Amerikai Egyesült Államokban találhatóak.</em>
+            </p>
           </section>
 
-          <section className="info-item">
-            <p>A platform tudományos alapjait az Eszterházy Károly Katolikus Egyetemen folytatott 
-              tanulmányaim és az Óbudai Egyetem (ÓE RKK) 2026 Projektkonferenciáján publikálandó munkám adják:
-              <em> „Matematikai képletek és példatár a megújuló energiaforrások témakörében”</em>. A kutatás során 
-              <strong> Mika János</strong> és <strong>Oláhné Téglási Ilona</strong> szakmai mentorálása segítette a tartalom elmélyítését.</p>
+          {/* 3. KÁRTYA */}
+          <section className="info-about">
+            <h3>3. Domainszolgáltató adatai</h3>
+            <dl>
+              <div>
+                <dt><strong>Név:</strong></dt>
+                <dd>Rackhost Zrt.</dd>
+              </div>
+              <div>
+                <dt><strong>Székhely:</strong></dt>
+                <dd>6722 Szeged, Tisza Lajos körút 41.</dd>
+              </div>
+              <div>
+                <dt><strong>E-mail cím:</strong></dt>
+                <dd>info@rackhost.hu</dd>
+              </div>
+              <div>
+                <dt><strong>Weboldal:</strong></dt>
+                <dd>
+                  <Link href="https://www.rackhost.hu" target="_blank">https://www.rackhost.hu</Link>
+                </dd>
+              </div>
+            </dl>
           </section>
 
-          <section className="info-item">
-            <p>A projekt a konferencia hitvallásához csatlakozva a fenntarthatóságot <strong>élő kompetenciaként</strong> kezeli, 
-              lebontva a <strong>falakat az oktatási szintek</strong> között. Bár a publikált képletgyűjtemény a megújuló energiaforrások matematikájára fókuszál, 
-              a Via Mundorum világa ennél jóval tágabb: a természettudományoktól a sakk logikáján át 
-              a humán ismeretekig több „út” (Via) nyílik meg a látogatók előtt.</p>
-          </section>
-
-          <section className="info-item">
-            <p>A célom egy olyan tudástér felépítése, ahol a fenntartható jövő technológiái 
-              mindenki számára átláthatóvá és tanulhatóvá válnak. A Via Mundorum digitális univerzuma egy folyamatosan bővülő 
-              tudományos igényű játéktér, ahol a tudás megszerzése <strong>valódi kaland</strong>.</p>
-          </section>
-
-          <section className="info-item">
-            <p>Hiszem, hogy a <strong>jövőt nemcsak tanítani kell, hanem közösen felépíteni</strong>.</p>
-            <p>Tarts velem a felfedezésben!</p>
-          </section>
-
-          <section className="info-item signature">
-            <p>Pesák Dóra Zita</p>
-            <p>A <strong>Via Mundorum</strong> megálmodója és fejlesztője</p>
-          </section>
-        
         </aside>
-
       </section>
     </>
   );

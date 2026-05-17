@@ -53,13 +53,16 @@ export default function ConceptPage() {
       <p>A háttérben a reál és a humán látásmód szoros fúziója áll. A nyelvtani vagy környezeti folyamatokat 
         mérnöki és matematikai precizitású logikai mátrixokba és folyamatábrákba rendezzük át. Ezáltal a 
         nehezen emészthető elméletek vizuálisan követhető, logikus algoritmusokká válnak, amelyek a fokozatosság 
-        elvét követve bárki számára könnyen elsajzíthatóak.</p>
+        elvét követve bárki számára könnyen elsajátíthatóak.</p>
 
       <p>A jövőt nemcsak tanítani kell, hanem közösen felépíteni. Lépj be a Világokba, és 
         indulj el az összefüggések útján!</p>
     </section>
-
-
+<div className="hero-cta-group">
+  <Link href="/worlds" className="cta-primary">
+    🌍 Belépés a Világokba
+  </Link>
+</div>
     <section className="gdpr">
        <h2>💡 Szakmai háttér</h2>
        <p>Ha kíváncsi vagy a projekt mögött álló egyetemi kutatásokra, az Óbudai Egyetemen bemutatott prezentációkra, 

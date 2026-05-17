@@ -701,76 +701,98 @@ main {
   color: #333;
 }
 
-/* A fő tároló */
+/* --- Impresszum Új CSS --- */
+
+/* A fő tároló - kiterjesztjük a szélességet, hogy a 3 kártya kényelmesen elférjen */
 .info-about-container {
   display: flex;
-  flex-wrap: wrap; /* Hogy mobilon egymás alá ugorjanak */
   justify-content: center;
   align-items: flex-start;
-  gap: 5%;                 /* Százalékos hézag a rugalmasságért */
   max-width: 1300px;
   margin: 40px auto;
   padding: 0 20px;
-  align-items: flex-start;
-  flex-direction: row; /* Egymás mellett legyenek */
-}
-
-/* Bal oszlop: Adatok (Vékonyabb, fix arány) */
-.info-box {
-  flex: 0 0 30%;           /* Pontosan az oldal 30%-át foglalja el */
-  min-width: 300px;        /* De ne legyen olvashatatlanul keskeny */
-  max-width: 400px;
-  color: #010152 !important;/* Vagy a dizájnodhoz illő szín */  
-  background: var(--surface) !important;
-  padding: 2rem;  /* Átvesszük az auth-box-log stílusait--> padding: 30px; */
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    
-  /* Ez akadályozza meg az összecsúszást */
   box-sizing: border-box;
 }
 
-/* Jobb oszlop: Bemutatkozás (Szélesebb és sorkizárt) */
-.about-box {
-  flex: 0 0 65%;           /* Pontosan az oldal 65%-át foglalja el */
-  text-align: justify;     /* SORKIZÁRT szöveg */
-  hyphens: auto;           /* Segít a szavak elválasztásában sorkizártnál */
-}
-.info-about {
-  margin-bottom: 40px;
-}
-.info-about h3, .about-box h3 {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-/* Címsorok igazítása (Sorkizárt szövegnél a címek maradjanak balra) */ 
-.about-box h4 {
-  text-align: left;
-  margin-bottom: 1rem;
+/* A rács elrendezés: az info-box lesz a kártyák gyűjtője */
+.info-box {
+  display: flex;
+  flex-direction: column; /* Mobilon egymás alatt */
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* --- Adatok belső elrendezése (Hogy ne törjön sort a dt/dd) --- */
+/* 1., 2., 3. KÁRTYÁK: Fehér téglalap, sötét szöveggel */
+.info-about {
+  background: #ffffff !important;
+  color: #1e293b !important; /* Sötét pala szürke szövegszín */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Finomabb árnyék a fehér háttérhez */
+  box-sizing: border-box;
+  margin-bottom: 0; /* A gap kezeli a távolságot a kártyák között */
+}
+
+/* Címek a fehér kártyákon belül */
+.info-about h3 {
+  text-align: center;
+  font-weight: bold;
+  color: #0f172a !important; /* Még sötétebb cím a jó olvashatóságért */
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e8f0; /* Elegáns elválasztó vonal a cím alatt */
+}
+
+/* --- Adatok belső elrendezése (Megtartva a szerkezetedet) --- */
 
 .info-about dl div {
   display: flex;
   margin-bottom: 8px;
-  text-align: left;        /* Az adatok maradjanak balra zártak */
+  text-align: left;
 }
 
 .info-about dt {
-  flex: 0 0 100px;         /* Fix hely a címkéknek */
+  flex: 0 0 100px; /* Fix hely a címkéknek */
   font-weight: bold;
+  color: #334155 !important; /* Kicsit lágyabb sötét a 'Név:', 'Székhely:' feliratoknak */
 }
 
 .info-about dd {
-  margin-left: 20px; /* Ezzel tolod beljebb az adatot */
-  margin-bottom: 10px; /* Egy kis hely a következő sor előtt */
+  margin-left: 20px;
+  margin-bottom: 10px;
   flex: 1;
+  color: #0f172a !important; /* Erős sötét a konkrét adatoknak */
+  /* Ez a két sor megakadályozza, hogy a szavak/számok csúnyán törjenek el a sor végén */
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
+
+/* Linkek javítása a fehér kártyán belül */
+.info-about a {
+  color: #2563eb !important; /* Jól látható kék szín a linkeknek */
+  text-decoration: underline;
+}
+
+.info-about a:hover {
+  color: #1d4ed8 !important;
+}
+
+/* Apró betűs szerver információ */
 .server-info {
   margin-top: 20px;
+  font-size: 0.85rem;
+  color: #64748b !important;
+}
+
+/* --- Hagyományos Media Query: Asztali gépen és tableten jön a 3 egyenlő oszlop --- */
+@media (min-width: 768px) {
+  .info-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 egyenlő részre osztás */
+    align-items: stretch; /* Ha valamelyik kártyán több a szöveg, mindegyik egyforma magas lesz */
+  }
 }
 /* Biztosíték a strong elemekre */
 strong {
