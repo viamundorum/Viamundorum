@@ -48,7 +48,7 @@ export default function ProjectPage() {
                 <dd>support@vercel.com</dd>
               </div>
               <div>
-                <dt><strong>Web:</strong></dt>
+                <dt><strong>Weboldal:</strong></dt>
                 <dd>
                   <Link href="https://vercel.com" target="_blank">https://vercel.com</Link>
                 </dd>
