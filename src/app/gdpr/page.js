@@ -109,7 +109,7 @@ export default function GDPRPage() {
                 <li><strong>Szolgáltató</strong>: Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Írország).</li>
                 <li><strong>Az adatkezelés célja</strong>: A weboldalba épített különböző mérőkódok (címkék) központi kezelése, 
                     aktiválása és finomhangolása. Maga a GTM rendszer sütiket nem helyez el és személyes 
-                    adatokat nem gyűjt, csupán más címkék beöltődését vezérli.</li>
+                    adatokat nem gyűjt, csupán más címkék betöltődését vezérli.</li>
                 <li><strong>Jogalap</strong>: Az Adatkezelő jogos érdeke a weboldal technikai, üzembiztos és 
                 strukturált működtetéséhez (GDPR 6. cikk (1) bek. f) pont).</li>
             </ul>

@@ -69,11 +69,13 @@ export default function PresentPage() {
               <h4 className="card-title">A hívatlan szó etimológiája, értelmezése és jelentése a magyar nyelvben</h4>
               <p className="card-institution">Eszterházy Károly Egyetem</p>
               <p className="card-description">
-                Matematika szakos szemlélettel készült nyelvtörténeti kutatás. A dolgozat részletesen feltérképezi a „hívatlan” szó és morfémái fejlődését az uráli gyökerektől, bemutatva a ritka határozószói jelentéseit és olyan kulturális ritkaságokat, mint a Szamoshát vidékének népszokásaiból ismert „hívatlanok tánca”.
+                Matematika szakos szemlélettel készült nyelvtörténeti kutatás. A dolgozat részletesen feltérképezi a 
+                „hívatlan” szó és morfémái fejlődését az uráli gyökerektől, bemutatva a ritka határozószói jelentéseit 
+                és olyan kulturális ritkaságokat, mint a Szamoshát vidékének népszokásaiból ismert „hívatlanok tánca”.
               </p>
             </div>
             <div className="card-action">
-              <div href="#" className="btn-portfolio btn-dark" download>Letöltés (PDF) - Hamarosan letölthető...</div>
+              <div href="#" className="btn-portfolio btn-dark" download>📄 Letöltés (PDF) - Hamarosan letölthető...</div>
             </div>
           </div>
 
@@ -84,11 +86,13 @@ export default function PresentPage() {
               <h4 className="card-title">Königsbergi töredék és szalagjai – Interaktív csomag</h4>
               <p className="card-institution">Magyar nyelvtörténeti korszakok</p>
               <p className="card-description">
-                Egy konkrét tanórára kidolgozott, élményalapú oktatási módszertan, amely közelebb hozza a kódexek világát a mai diákokhoz. Tartalmazza a teljes szakmai hátteret, a vizuális óratervező prezentációt, valamint játékos, logikai feladatlapokat és rejtvényeket.
+                Egy konkrét tanórára kidolgozott, élményalapú oktatási módszertan, amely közelebb hozza a kódexek világát 
+                a mai diákokhoz. Tartalmazza a teljes szakmai hátteret, a vizuális óratervező prezentációt, valamint játékos, 
+                logikai feladatlapokat és rejtvényeket.
               </p>
             </div>
             <div className="card-action">
-              <div href="#" className="btn-portfolio btn-dark" download>Projektcsomag letöltése - Hamarosan letölthető...</div>
+              <div href="#" className="btn-portfolio btn-dark" download>📄 Projektcsomag letöltése - Hamarosan letölthető...</div>
             </div>
           </div>
 
@@ -99,11 +103,13 @@ export default function PresentPage() {
               <h4 className="card-title">A magyar nyelv szabályos hangváltozásainak logikai rendszere</h4>
               <p className="card-institution">Önkéntes egyéni kezdeményezés</p>
               <p className="card-description">
-                A csoporttársak támogatására, szabadidőben készített tanulmányi segédlet. A matematika strukturált logikáját és folyamatábráit alkalmazva magyarázza el a korai magyar hangváltozásokat (zöngésülés, dezaffrikáció), bebizonyítva a „fokozatosság elvét”, miszerint egyszerre csak egy képzési mozzanat módosulhat.
+                A csoporttársak támogatására, szabadidőben készített tanulmányi segédlet. A matematika strukturált logikáját és 
+                folyamatábráit alkalmazva magyarázza el a korai magyar hangváltozásokat (zöngésülés, dezaffrikáció), bebizonyítva 
+                a „fokozatosság elvét”, miszerint egyszerre csak egy képzési mozzanat módosulhat.
               </p>
             </div>
             <div className="card-action">
-              <div href="#" className="btn-portfolio btn-dark" download>Letöltés (PDF) - Hamarosan letölthető...</div>
+              <div href="#" className="btn-portfolio btn-dark" download>📄 Letöltés (PDF) - Hamarosan letölthető...</div>
             </div>
           </div>
 
@@ -124,7 +130,8 @@ export default function PresentPage() {
               <h4 className="card-title">Matematikai képletek és példatár a megújuló energiaforrások témakörében</h4>
               <p className="card-institution">Kutatási összefoglaló</p>
               <p className="card-description">
-                A projekt elméleti és tudományos magja. A fenntarthatóság kérdéskörét matematikai modelleken keresztül megközelítő tanulmány, amely a tiszta energiaforrások hatékonysági számításai és az oktatásba integrálható gyakorlati feladatokat rendszerezi.
+                A projekt elméleti és tudományos magja. A fenntarthatóság kérdéskörét matematikai modelleken keresztül megközelítő 
+                tanulmány, amely a tiszta energiaforrások hatékonysági számításai és az oktatásba integrálható gyakorlati feladatokat rendszerezi.
               </p>
             </div>
             <div className="card-action">
@@ -141,7 +148,8 @@ export default function PresentPage() {
               <h4 className="card-title">Óbudai Egyetem (ÓE RKK) 2026 Projektkonferencia</h4>
               <p className="card-institution">Hivatalos Megjelenés</p>
               <p className="card-description">
-                A kutatómunka hivatalos megjelenési helye és szakmai közege. A konferencia kötete hivatalos formában rögzíti az elért eredményeket, támogatva a fenntarthatóság élő kompetenciaként való átültetését az oktatási szintek között.
+                A kutatómunka hivatalos megjelenési helye és szakmai közege. A konferencia kötete hivatalos formában rögzíti az 
+                elért eredményeket, támogatva a fenntarthatóság élő kompetenciaként való átültetését az oktatási szintek között.
               </p>
             </div>
             <div className="card-action">

@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import SafeEmail from '@/components/safeemail';
+import VercelEmail from '@/components/vercelemail';
+import Rackhost from '@/components/rackhost';
 
 export default function ProjectPage() {
   return (
@@ -45,7 +47,7 @@ export default function ProjectPage() {
               </div>
               <div>
                 <dt><strong>E-mail cím:</strong></dt>
-                <dd>support@vercel.com</dd>
+                <dd><VercelEmail /></dd>
               </div>
               <div>
                 <dt><strong>Weboldal:</strong></dt>
@@ -73,7 +75,7 @@ export default function ProjectPage() {
               </div>
               <div>
                 <dt><strong>E-mail cím:</strong></dt>
-                <dd>info@rackhost.hu</dd>
+                <dd><Rackhost /></dd>
               </div>
               <div>
                 <dt><strong>Weboldal:</strong></dt>

@@ -1546,9 +1546,9 @@ nav a {
   color: #333;
   line-height: 1.5;
   text-align: justify;
-  /* Automatikus vágás 5 sor után egy elegáns ... jellel */
+  /* Automatikus vágás 6 sor után egy elegáns ... jellel */
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
