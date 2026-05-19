@@ -17,7 +17,7 @@ export default function StudyPage({ params }) {
   useLayoutEffect(() => {
     if (world) {
       const body = document.body;
-      const headerTitle = document.querySelector('header h1');
+      const headerTitle = document.querySelector('.logo-title');
       const originalTitle = "Via Mundorum";
 
       body.classList.add(id);

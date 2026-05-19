@@ -15,7 +15,7 @@ export default function WorldPage({ params }) {
       const root = document.documentElement; // A html elem
       const body = document.body;
       body.classList.add(id);
-      const headerTitle = document.querySelector('header h1');
+      const headerTitle = document.querySelector('.logo-title');
       const originalTitle = "Via Mundorum";
 
       // 1. Az adott világ osztályának hozzáadása (pl. .via-linguae)

@@ -21,7 +21,7 @@ export default function Navbar() {
     <header>
       <Link href="/worlds" style={{ textDecoration: 'none', color: 'inherit' }}>
     
-      <h1>Via Mundorum</h1>
+      <div className="logo-title">Via Mundorum</div>
       </Link>
       <nav>
         <Link href="/">Kezdőlap</Link>

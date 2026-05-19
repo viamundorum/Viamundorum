@@ -16,7 +16,7 @@ export default function StudyPage({ params }) {
   useEffect(() => {
     if (world) {
       const body = document.body;
-      const headerTitle = document.querySelector('header h1');
+      const headerTitle = document.querySelector('.logo-title');
       const originalTitle = "Via Mundorum";
 
       // 1. Ugyanazt az osztályt adjuk hozzá, mint a Világ oldalon!

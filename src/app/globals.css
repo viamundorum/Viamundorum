@@ -67,6 +67,12 @@ header h1 {
   white-space: nowrap; /* A cím ne törjön több sorba */
   text-align: right;
 }
+
+.logo-title {
+  font-size: 2.25rem; /* Ez kb 36px, szép nagy méret, mint egy h1 */
+  font-weight: 400; /* Kifejezetten vastag, hangsúlyos betűk */
+  letter-spacing: -0.05rem; /*Kicsit összehúzza a betűket, ami modern hatást kelt. */
+}
 /* =========================
    NAVIGÁCIÓ
 ========================= */

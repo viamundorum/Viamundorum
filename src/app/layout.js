@@ -6,6 +6,8 @@ import Footer from "../components/footer";
 export const metadata = {
   title: "Via Mundorum",
   description: "Tanulás világokon keresztül, interdiszciplináris oktatási univerzum, digitális tudástér",
+  icon: "🧭",
+
 };
 
 export default function RootLayout({ children }) {
