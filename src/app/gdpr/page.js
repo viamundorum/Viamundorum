@@ -149,7 +149,7 @@ export default function GDPRPage() {
                 adatot (például teljes IP-címet, helyadatokat vagy egyedi eszközazonosítókat). Az IP-címekből egy egyirányú hash kódot 
                 generál a rendszer a napi egyedi látogatók számolásához, amelyből a valós IP-cím nem állítható vissza, és amely 8 órán 
                 belül automatikusan törlődik.</li>
-                <li>A gyűjtött technikai adatok köre: A böngésző által küldött alapvető információk (URL cím, hivatkozó oldal/referrer, 
+                <li><strong>A gyűjtött technikai adatok köre</strong>: A böngésző által küldött alapvető információk (URL cím, hivatkozó oldal/referrer, 
                 képernyőfelbontás, böngésző típusa, hozzávetőleges ország a nyelv alapján). Ezen adatok alapján a látogató 
                 személye nem azonosítható.</li>
             </ul>
