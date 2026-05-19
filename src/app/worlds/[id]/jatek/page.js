@@ -14,8 +14,8 @@ export async function generateMetadata({ params }) {
     .join(' ');
 
   return {
-    title: `${worldName} - Játék és Tesztek | Via Mundorum`,
-    description: `Tedd próbára a tudásod! Játékos feladatok, küldetések és kvízek várnak rád a megszerzett ismeretek elmélyítéséhez.`,
+    title: "${worldName} - Játék és Tesztek | Via Mundorum",
+    description: "Tedd próbára a tudásod! Játékos feladatok, küldetések és kvízek várnak rád a megszerzett ismeretek elmélyítéséhez.",
   };
 }
 

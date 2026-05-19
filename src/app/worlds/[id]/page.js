@@ -15,8 +15,8 @@ export async function generateMetadata({ params }) {
 
   return {
     // Kicserélve visszafelé dőlő idézőjelekre (`), hogy működjön a szövegbeágyazás!
-    title: `${worldName} | Via Mundorum`,
-    description: `Fedezd fel a(z) ${worldName} világot a Via Mundorum oktatási platformon! Ismerd meg a témakörhöz kapcsolódó interaktív feladatokat és tananyagokat.`,
+    title: "${worldName} | Via Mundorum",
+    description: "Fedezd fel a(z) ${worldName} világot a Via Mundorum oktatási platformon! Ismerd meg a témakörhöz kapcsolódó interaktív feladatokat és tananyagokat.",
   };
 }
 

@@ -1,13 +1,9 @@
 "use client";
 import { useSearchParams } from 'next/navigation';
-import { Suspense } from 'react'; // 1. Ezt add hozzá
+import { Suspense } from 'react';
 
-export const metadata = {
-  title: "Keresés | Via Mundorum",
-  description: "Itt találhatod meg azt, amit keresel. Ha nem találod a világodat.",
-};
+// A metadata blokk innen törölve lett!
 
-// 2. Hozz létre egy belső komponenst a tartalomnak
 function SearchContent() {
   const searchParams = useSearchParams();
   const query = searchParams.get('q');
@@ -33,7 +29,6 @@ function SearchContent() {
   );
 }
 
-// 3. A fő exportban csomagold be a Suspense-be
 export default function SearchPage() {
   return (
     <Suspense fallback={<div>Betöltés...</div>}>

@@ -14,8 +14,8 @@ export async function generateMetadata({ params }) {
     .join(' ');
 
   return {
-    title: `${worldName} - Tanulás | Via Mundorum`,
-    description: `Fedezd fel a(z) ${worldName} világot, sajátítsd el a megújuló energiák alapjait az interaktív tananyagokkal!`,
+    title: "${worldName} - Tanulás | Via Mundorum",
+    description: "Fedezd fel a(z) ${worldName} világot, sajátítsd el a megújuló energiák alapjait az interaktív tananyagokkal!",
   };
 }
 

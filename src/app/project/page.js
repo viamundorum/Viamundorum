@@ -4,8 +4,8 @@ import VercelEmail from '@/components/vercelemail';
 import Rackhost from '@/components/rackhost';
 
 export const metadata = {
-  title: 'Impresszum | Via Mundorum',
-  description: 'A Via Mundorum oktatási platform hivatalos impresszuma, az üzemeltető és a szolgáltatók adatai.',
+  title: "Impresszum | Via Mundorum",
+  description: "A Via Mundorum oktatási platform hivatalos impresszuma, az üzemeltető és a szolgáltatók adatai.",
 };
 
 export default function ProjectPage() {
