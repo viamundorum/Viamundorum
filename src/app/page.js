@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: "Főoldal | Via Mundorum",
+  description: "Ismerd meg a Via Mundorum digitális tudástér világát, egy interdiszciplináris oktatási univerzumon keresztül!",
+};
+
 export default function HomePage() {
   return (
     <>

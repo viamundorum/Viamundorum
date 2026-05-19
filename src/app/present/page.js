@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: "Bemutatkozas | Via Mundorum",
+  description: "A Szerző bemutatkozó oldala. Olvashatsz a weboldal (és a Szerző) szakmai hátteréről, világlátásáról.",
+};
+
 export default function PresentPage() {
   return (
     <div className="present-container">

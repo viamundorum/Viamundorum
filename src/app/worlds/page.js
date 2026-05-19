@@ -1,11 +1,16 @@
 import Link from 'next/link';
 import { worldsData } from '../../data/worlds';
 
+export const metadata = {
+  title: "Világok | Via Mundorum",
+  description: "Tanulás világokon keresztül, interdiszciplináris oktatási univerzum, digitális tudástér.",
+};
+
 export default function WorldsPage() {
   return (
     <>
       <section className="intro">
-        <h2>Válassz világot!</h2>
+        <h1>Válassz világot!</h1>
       </section>
 
       <section className="world-grid">

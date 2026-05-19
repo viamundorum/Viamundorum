@@ -5,6 +5,30 @@ import { useState, use , useLayoutEffect} from 'react'; // useEffect helyett
 import { worldsData } from '../../../data/worlds';
 import { notFound } from 'next/navigation';
 
+
+// 1. Ez a függvény felel a dinamikus metaadatokért
+export async function generateMetadata({ params }) {
+  // Megvárjuk a paramétereket (Next.js 15+ esetén kötelező az await, korábbi verzióknál elhagyható)
+  const { id } = await params;
+
+  // Itt egy kicsit szépíthetjük az ID-t a címhez (pl. "via-renovabilorum" -> "Via Renovabilorum")
+  // Első betű nagybetű, kötőjelek szóközre cserélése
+  const worldName = id
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+  return {
+    title: "${worldName} | Via Mundorum",
+    description: "Fedezd fel a(z) ${worldName} világot a Via Mundorum oktatási platformon! Ismerd meg a témakörhöz kapcsolódó interaktív feladatokat és tananyagokat.",
+    // Opcionálisan beállíthatsz egyedi képet is a megosztásokhoz, ha van minden világhoz külön képed:
+    // openGraph: {
+    //   images: [`/images/worlds/${id}-og.png`],
+    // },
+  };
+}
+
+// 2. Az eredeti oldal komponensed változatlan marad
 export default function WorldPage({ params }) {
   const unwrappedParams = use(params);
   const id = unwrappedParams.id;
@@ -38,7 +62,7 @@ export default function WorldPage({ params }) {
   return (
     <div className="inner-world-view">
       <section className="intro">
-        <h2>Válassz utat!</h2>
+        <h1>Válassz utat!</h1>
         <p>Fedezd fel a tudás különböző útjait.</p>
       </section>
 

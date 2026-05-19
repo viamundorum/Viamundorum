@@ -2,6 +2,11 @@
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react'; // 1. Ezt add hozzá
 
+export const metadata = {
+  title: "Keresés | Via Mundorum",
+  description: "Itt találhatod meg azt, amit keresel. Ha nem találod a világodat.",
+};
+
 // 2. Hozz létre egy belső komponenst a tartalomnak
 function SearchContent() {
   const searchParams = useSearchParams();

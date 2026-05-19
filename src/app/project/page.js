@@ -3,11 +3,16 @@ import SafeEmail from '@/components/safeemail';
 import VercelEmail from '@/components/vercelemail';
 import Rackhost from '@/components/rackhost';
 
+export const metadata = {
+  title: 'Impresszum | Via Mundorum',
+  description: 'A Via Mundorum oktatási platform hivatalos impresszuma, az üzemeltető és a szolgáltatók adatai.',
+};
+
 export default function ProjectPage() {
   return (
     <>
       <section className="intro">
-        <h2>Impresszum</h2>
+        <h1>Impresszum</h1>
       </section>
 
       <section className="info-about-container">

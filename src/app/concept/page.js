@@ -1,5 +1,9 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: "Koncepció | Via Mundorum",
+  description: "Hogyan jött létre az platform ötlete, illetve hogyan kell használni a világkártyákat.",
+};
 export default function ConceptPage() {
   return (
     <>

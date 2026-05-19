@@ -1,6 +1,11 @@
 import SafeEmail from '@/components/safeemail';
 import Link from 'next/link';
 
+export const metadata = {
+  title: "Felhasználási Feltételek | Via Mundorum",
+  description: "A Via Mundorum Felhasználási Feltételek oldala.",
+};
+
 export default function ASZFPage() {
   return (
     <>
@@ -8,7 +13,7 @@ export default function ASZFPage() {
         <h1>Felhasználási feltételek</h1>
 </section>   
 <section className="gdpr">
-    Hatályos: 2026. május 15-től visszavonásig.
+    <p>Hatályos: 2026. május 15-től visszavonásig.</p>
 </section>       
     <section className="gdpr">
         <h2>1. Általános rendelkezések</h2>

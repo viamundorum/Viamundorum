@@ -4,6 +4,11 @@ import React from 'react';
 import StaticEmail from '@/components/staticemail'; // Feltételezve, hogy külön fájlba tetted
 import { useForm, ValidationError } from '@formspree/react';
 
+export const metadata = {
+  title: "Kapcsolat | Via Mundorum",
+  description: "Itt fel veheted a kapcsolatot a készítővel, és megírhatod a véleményedet, ötleteidet, észrevételeidet.",
+};
+
 export default function KapcsolatPage() {
   return (
     <>

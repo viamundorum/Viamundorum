@@ -5,7 +5,12 @@ import { worldsData } from '@/data/worlds';
 import { allLessons } from '@/data/lessons/index';
 import { notFound } from 'next/navigation';
 
-export default function StudyPage({ params }) {
+export const metadata = {
+  title: "Játék és Tesztek | Via Mundorum",
+  description: "Tedd próbára a tudásod! Játékos feladatok, küldetések és kvízek várnak rád a megszerzett ismeretek elmélyítéséhez!",
+};
+
+export default function GamePage({ params }) {
   const unwrappedParams = use(params);
   const id = unwrappedParams.id;
   const world = worldsData[id];

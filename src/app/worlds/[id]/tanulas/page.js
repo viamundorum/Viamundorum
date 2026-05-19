@@ -5,6 +5,11 @@ import { worldsData } from '@/data/worlds';
 import { allLessons } from '@/data/lessons/index';
 import { notFound } from 'next/navigation';
 
+export const metadata = {
+  title: "Tanulás | Via Mundorum",
+  description: "Fedezd fel a digitális világokat, sajátítsd el a megújuló energiák alapjait és gyűjtsd a pontokat az interaktív tananyagokkal!",
+};
+
 export default function StudyPage({ params }) {
   const unwrappedParams = use(params);
   const id = unwrappedParams.id;
@@ -44,6 +49,9 @@ export default function StudyPage({ params }) {
 
   return (
     <div className="study-wrapper">
+    <section className="intro">
+      <h1>Tanulás</h1>
+    </section>
       <div className="study-container">
         {/* BAL OLDAL: Tartalomjegyzék */}
         <aside className="study-sidebar">

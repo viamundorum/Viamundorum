@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-links">
-        <Link href="/gdpr">Adatkezelési tájékoztató</Link>
-        <Link href="/aszf">Felhasználási feltételek</Link>
+        <Link href="/gdpr">Adatkezelési Tájékoztató</Link>
+        <Link href="/aszf">Felhasználási Feltételek</Link>
         <Link href="/project">Impresszum</Link>
       {/*  <Link href="/qr_code">QR kód</Link> */}
       </div>

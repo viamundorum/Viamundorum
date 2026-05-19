@@ -2,18 +2,23 @@ import SafeEmail from '@/components/safeemail';
 import NaihEmail from '@/components/naihemail';
 import Link from 'next/link';
 
+export const metadata = {
+  title: "Adatkezelési Tájékoztató | Via Mundorum",
+  description: "A Via Mundorum adatvédelmi és adatkezelési szabályzata. Ismerd meg, hogyan vigyázunk az adataidra!",
+};
+
 export default function GDPRPage() {
   return (
     <>
-<section className="intro">
-        <h1>Adatkezelési tájékoztató</h1>
-</section>  
-<section className="gdpr">
-    Hatályos: 2026. május 15-től visszavonásig.
-</section>      
+    <section className="intro">
+        <h1>Adatkezelési Tájékoztató</h1>
+    </section>  
+    <section className="gdpr">
+        <p>Hatályos: 2026. május 15-től visszavonásig.</p>
+    </section>      
     <section className="gdpr">
         <h2>1. Általános rendelkezések</h2>
-        <p>Jelen Adatkezelési tájékoztató kiterjed a Pesák Dóra Zita (a továbbiakban: Adatkezelő) 
+        <p>Jelen Adatkezelési Tájékoztató kiterjed a Pesák Dóra Zita (a továbbiakban: Adatkezelő) 
             által üzemeltetett viamundorum.hu weboldalra és annak összes aloldalára. 
             A honlap látogatója (a továbbiakban: Felhasználó) a honlap látogatásával egyben 
             elfogadja a jelen tájékoztatóban foglaltakat.
