@@ -48,10 +48,11 @@ export default function StudyPage({ params }) {
   if (!world || !lessonData) return notFound();
 
   return (
-    <div className="study-wrapper">
+  <>
     <section className="intro">
       <h1>Tanulás</h1>
     </section>
+    <div className="study-wrapper">
       <div className="study-container">
         {/* BAL OLDAL: Tartalomjegyzék */}
         <aside className="study-sidebar">
@@ -231,5 +232,6 @@ export default function StudyPage({ params }) {
         }
       `}</style>
     </div>
+  </>
   );
 }
