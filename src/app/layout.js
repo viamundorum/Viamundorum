@@ -42,6 +42,14 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+            
+      {/* 3. IDE RAKD A GOATCOUNTER SCRIPTET A BODY VÉGÉRE */}
+        <Script
+          strategy="afterInteractive"
+          data-goatcounter="https://viamundorum.goatcounter.com/count"
+          src="//gc.zgo.at/count.js"
+        />
+
       </body>
     </html>
   );
