@@ -13,7 +13,7 @@ export default function GDPRPage() {
 </section>      
     <section className="gdpr">
         <h2>1. Általános rendelkezések</h2>
-        <p>Jelen Adatkezelési Tájékoztató kiterjed a Pesák Dóra Zita (a továbbiakban: Adatkezelő) 
+        <p>Jelen Adatkezelési tájékoztató kiterjed a Pesák Dóra Zita (a továbbiakban: Adatkezelő) 
             által üzemeltetett viamundorum.hu weboldalra és annak összes aloldalára. 
             A honlap látogatója (a továbbiakban: Felhasználó) a honlap látogatásával egyben 
             elfogadja a jelen tájékoztatóban foglaltakat.
@@ -131,6 +131,22 @@ export default function GDPRPage() {
                 <li><strong>Jogalap</strong>: A Felhasználó önkéntes és kifejezett hozzájárulása (GDPR 6. cikk (1) bek. a) pont). 
                 A kód betöltése mindaddig blokkolva van, amíg a Felhasználó a Cookiebot felületén hozzá nem járul a 
                 statisztikai/funkcionális sütik futtatásához.</li>
+            </ul>
+            <li>GoatCounter</li>
+            <ul className="list-disc list-inside">
+                <li><strong>Szolgáltató</strong>: GoatCounter (üzemeltető: Martin Tournoij, Hollandia – EU). Az adatok tárolása az 
+                Európai Unión belüli szervereken történik.</li>
+                <li><strong>Az adatkezelés célja</strong>: A weboldal látogatottságának mérése, statisztikai elemzése és a működés optimalizálása.</li>
+                <li><strong>Jogalap</strong>: Az Adatkezelő jogos érdeke [GDPR 6. cikk (1) bekezdés f) pont] a weboldal 
+                működésének és látogatottságának elemzése.</li>
+                <li><strong>Nem használ sütiket (cookies)</strong>: A szolgáltatás nem helyez el és nem olvas be sütiket a látogató eszközéről.</li>
+                <li><strong>Személyes adatok védelme</strong>: A rendszer nem gyűjt, nem tárol és nem követ nyomon semmilyen személyes 
+                adatot (például teljes IP-címet, helyadatokat vagy egyedi eszközazonosítókat). Az IP-címekből egy egyirányú hash kódot 
+                generál a rendszer a napi egyedi látogatók számolásához, amelyből a valós IP-cím nem állítható vissza, és amely 8 órán 
+                belül automatikusan törlődik.</li>
+                <li>A gyűjtött technikai adatok köre: A böngésző által küldött alapvető információk (URL cím, hivatkozó oldal/referrer, 
+                képernyőfelbontás, böngésző típusa, hozzávetőleges ország a nyelv alapján). Ezen adatok alapján a látogató 
+                személye nem azonosítható.</li>
             </ul>
         </ol>
     </section>
