@@ -1,13 +1,10 @@
 "use client";
 
 import React from 'react';
-import StaticEmail from '@/components/staticemail'; // Feltételezve, hogy külön fájlba tetted
+import StaticEmail from '@/components/staticemail'; 
 import { useForm, ValidationError } from '@formspree/react';
 
-export const metadata = {
-  title: "Kapcsolat | Via Mundorum",
-  description: "Itt fel veheted a kapcsolatot a készítővel, és megírhatod a véleményedet, ötleteidet, észrevételeidet.",
-};
+// A metadata blokk innen törölve lett!
 
 export default function KapcsolatPage() {
   return (
@@ -42,7 +39,6 @@ export default function KapcsolatPage() {
         {/* Jobb oszlop: Az űrlap */}
         <div className="contact-form-box">
           <h3>Vélemény</h3>
-          {/* JAVÍTOTT RÉSZ: Az action mezőbe bekerült az egyedi Formspree azonosítód */}
           <form action="https://formspree.io/f/xaqvpoeo" method="POST">
             <label htmlFor="name">Név (opcionális)</label>
             <input name="name" type="text" id="name" placeholder="Kovács Anna Mariann" />
@@ -66,7 +62,6 @@ export default function KapcsolatPage() {
               required
             ></textarea>
 
-            {/* Extra beállítások a Formspree-hez */}
             <input type="hidden" name="_subject" value="Via Mundorum Kapcsolat" />
             
             <input type="submit" value="Üzenet küldése" />

@@ -13,9 +13,9 @@ export async function generateMetadata({ params }) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
-  return {
-    title: "${worldName} - Tanulás | Via Mundorum",
-    description: "Fedezd fel a(z) ${worldName} világot, sajátítsd el a megújuló energiák alapjait az interaktív tananyagokkal!",
+return {
+    title: `${worldName} - Tanulás | Via Mundorum`,
+    description: `Fedezd fel a(z) ${worldName} világot, sajátítsd el a megújuló energiák alapjait az interaktív tananyagokkal!`,
   };
 }
 

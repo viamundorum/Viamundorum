@@ -13,8 +13,8 @@ export async function generateMetadata({ params }) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
-  return {
-    title: "${worldName} - Játék és Tesztek | Via Mundorum",
+return {
+    title: `${worldName} - Játék és Tesztek | Via Mundorum`,
     description: "Tedd próbára a tudásod! Játékos feladatok, küldetések és kvízek várnak rád a megszerzett ismeretek elmélyítéséhez.",
   };
 }

@@ -13,10 +13,9 @@ export async function generateMetadata({ params }) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
-  return {
-    // Kicserélve visszafelé dőlő idézőjelekre (`), hogy működjön a szövegbeágyazás!
-    title: "${worldName} | Via Mundorum",
-    description: "Fedezd fel a(z) ${worldName} világot a Via Mundorum oktatási platformon! Ismerd meg a témakörhöz kapcsolódó interaktív feladatokat és tananyagokat.",
+return {
+    title: `${worldName} | Via Mundorum`,
+    description: `Fedezd fel a(z) ${worldName} világot a Via Mundorum oktatási platformon! Ismerd meg a témakörhöz kapcsolódó interaktív feladatokat és tananyagokat.`,
   };
 }
 
