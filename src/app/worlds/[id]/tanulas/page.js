@@ -52,6 +52,7 @@ export default function StudyPage({ params }) {
     <section className="intro">
       <h1>Tanulás</h1>
     </section>
+    
     <div className="study-wrapper">
       <div className="study-container">
         {/* BAL OLDAL: Tartalomjegyzék */}
