@@ -13,6 +13,11 @@ export async function generateMetadata({ params }) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
+  const metadata = {
+  title: `Játék | ${worldName}`,
+  description: `Ismerd meg a ${worldName} digitális tudástér világát, egy interdiszciplináris oktatási univerzumon keresztül!`,
+};
+
 return {
     title: `${worldName} - Játék és Tesztek | Via Mundorum`,
     description: "Tedd próbára a tudásod! Játékos feladatok, küldetések és kvízek várnak rád a megszerzett ismeretek elmélyítéséhez.",

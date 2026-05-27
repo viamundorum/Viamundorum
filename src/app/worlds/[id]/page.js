@@ -13,6 +13,11 @@ export async function generateMetadata({ params }) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
+  const metadata = {
+  title: `${worldName} | Via Mundorum`,
+  description: `Ismerd meg a ${worldName} digitális tudástér világát, egy interdiszciplináris oktatási univerzumon keresztül!`,
+};
+
 return {
     title: `${worldName} | Via Mundorum`,
     description: `Fedezd fel a(z) ${worldName} világot a Via Mundorum oktatási platformon! Ismerd meg a témakörhöz kapcsolódó interaktív feladatokat és tananyagokat.`,

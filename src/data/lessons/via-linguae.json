@@ -19,27 +19,27 @@
         {
           "id": "hangszalag",
           "title": "Hangszalak",
-          "content": "Tartalom..."
+          "content": "Hamarosan..."
         },
         {
           "id": "orr",
           "title": "Orrüreg",
-          "content": "Tartalom..."
+          "content": "Hamarosan..."
         },
         {
           "id": "szaj",
           "title": "Szájüreg",
-          "content": "Tartalom..."
+          "content": "Hamarosan..."
         },
         {
           "id": "mgh",
           "title": "Magánhangzók",
-          "content": "Tartalom..."
+          "content": "Hamarosan..."
         },
         {
           "id": "msh",
           "title": "Mássalhangzók",
-          "content": "Tartalom..."
+          "content": "Hamarosan..."
         }
       ]
     },

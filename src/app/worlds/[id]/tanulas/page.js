@@ -13,6 +13,11 @@ export async function generateMetadata({ params }) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
+  const metadata = {
+  title: `Tanulás | ${worldName}`,
+  description: `Ismerd meg a ${worldName} digitális tudástér világát, egy interdiszciplináris oktatási univerzumon keresztül!`,
+};
+
 return {
     title: `${worldName} - Tanulás | Via Mundorum`,
     description: `Fedezd fel a(z) ${worldName} világot, sajátítsd el a megújuló energiák alapjait az interaktív tananyagokkal!`,

@@ -30,8 +30,8 @@ export default function WorldClientContent({ id, world }) {
   return (
     <div className="inner-world-view">
       <section className="intro">
-        <h1>Válassz utat!</h1>
-        <p>Fedezd fel a tudás különböző útjait.</p>
+        <p className="tanulas-title">Fedezd fel a tudás különböző útjait!</p>
+        <h1>Válassz utat: klasszikus olvasgatás vagy játékos felfedezés!</h1>
       </section>
 
       <div className="big-button-container">

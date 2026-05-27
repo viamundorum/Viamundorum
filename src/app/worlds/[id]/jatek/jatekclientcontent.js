@@ -1,6 +1,7 @@
 // /src/app/worlds/[id]/jatek/jatekclientcontent.js
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from 'react';
 
 export default function JatekClientContent({ id, world, lessonData }) {
@@ -37,6 +38,8 @@ export default function JatekClientContent({ id, world, lessonData }) {
   return (
     <section className="intro">
       <h1>Játék - Fejlesztés alatt...</h1>
+      <br />
+      <p>Próbáld ki magad: 👉<Link href="https://viamundi-demo.netlify.app"> Demo oldal</Link></p>
     </section>
   );
 }
