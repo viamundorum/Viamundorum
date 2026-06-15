@@ -7,6 +7,9 @@ export const metadata = {
   title: "Via Mundorum - Digitális Oktatási Platform",
   description: "Interaktív tananyagok, feladatok és megújuló energiaforrások oktatása diákoknak.",
   metadataBase: new URL("https://viamundorum.hu"), // Ez segít a Google-nek a pontos linkek generálásában
+  appleWebApp: {
+    title: "Via Mundorum",
+  },
 };
 
 export default function RootLayout({ children }) {
