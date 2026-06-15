@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Bemutatkozas | Via Mundorum",
+  title: "Bemutatkozás | Via Mundorum",
   description: "A Szerző bemutatkozó oldala. Olvashatsz a weboldal (és a Szerző) szakmai hátteréről, világlátásáról.",
 };
 
