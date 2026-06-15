@@ -1,3 +1,5 @@
+'use client'; // <-- EZ AZ ELENGEDHETETLEN ÚJ SOR!
+
 import Link from 'next/link';
 
 export default function Footer() {
@@ -8,7 +10,7 @@ export default function Footer() {
         <Link href="/aszf">Felhasználási Feltételek</Link>
         <Link href="/project">Impresszum</Link>
         
-        {/* ÚJ GOMB: Erre kattintva bárhonnan újra felugrik a sütibanner */}
+        {/* A gombunk így már tökéletesen és hiba nélkül fog működni */}
         <button 
           onClick={() => window.dispatchEvent(new Event('open-cookie-banner'))}
           style={{
