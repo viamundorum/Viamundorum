@@ -64,41 +64,39 @@ export default function GDPRPage() {
         </ul>
     </section>
     <section className="gdpr">
-        <h2>7. Sütik (Cookie-k) kezelése és a Cookiebot használata</h2>
+        <h2>7. Sütik (Cookie-k) kezelése és a hozzájárulások kezelése</h2>
         <ol className="list-decimal list-inside">
             <li>A sütikről általában:</li>
             <ul className="list-disc list-inside">
-            <li>A honlap a jobb felhasználói élmény, a weboldal biztonságos működése, valamint 
-                a látogatottsági statisztikák elemzése érdekében kis adatfájlokat, úgynevezett 
-                sütiket (cookie-kat) helyez el a Felhasználó számítógépén vagy mobileszközén.</li>
+            <li>A honlap a jobb felhasználói élmény, a weboldal biztonságos működése, valamint a látogatottsági s
+                tatisztikák elemzése érdekében kis adatfájlokat, úgynevezett sütiket (cookie-kat) helyez el a 
+                Felhasználó számítógépén vagy mobileszközén.</li>
             </ul>
-            <li>A Cookiebot rendszer használata:</li>
+            <li>A hozzájárulások kezelésének módja:</li>
             <ul className="list-disc list-inside">
-            <li>A weboldal a sütikhez való hozzájárulások kezelésére, naplózására és a sütik automatikus 
-                blokkolására a Cookiebot (Usercentrics A/S, Havnegade 39, 1058 Copenhagen, Dánia) szolgáltatását 
-                használja. A Cookiebot biztosítja, hogy a nem feltétlenül szükséges (statisztikai, marketing, 
-                funkcionális) sütik mindaddig ne töltődjenek be és ne gyűjtsenek adatot, amíg a Felhasználó ehhez 
-                kifejezett hozzájárulását nem adja az oldalon megjelenő süti-sávban (Consent Banner).</li>
+                <li>A weboldal a sütikhez való hozzájárulások kezelésére és a sütik blokkolására egy egyedileg fejlesztett 
+                süti-kezelő rendszert (Cookie Banner) és a Google Tag Manager szolgáltatást használja. Ez a rendszer biztosítja, 
+                hogy a nem feltétlenül szükséges (statisztikai, marketing, funkcionális) sütik mindaddig ne töltődjenek be és 
+                ne gyűjtsenek adatot, amíg a Felhasználó ehhez kifejezett hozzájárulását nem adja az oldalon megjelenő süti-sávban.</li>
+                <li>Kivételt képeznek ez alól a magánélet-védő (privacy-friendly), süti-mentes analitikai eszközök (GoatCounter), 
+                amelyek nem helyeznek el sütit a látogató eszközén, nem követik a Felhasználót más oldalakon, és 
+                személyes adatot nem rögzítenek, így a jogszabályok értelmében előzetes hozzájárulás nélkül is működhetnek.</li>
             </ul>
             <li>A kezelt adatok köre és jogalapja:</li>
             <ul className="list-disc list-inside">
-                <li>Szükséges (alapműködést biztosító) sütik: Jogalapja az elektronikus kereskedelmi 
-                    szolgáltatásokról szóló törvény (Ektv.) 13/A. § (3) bekezdése (a szolgáltatás 
-                    biztosításához technikailag elengedhetetlen).</li>
-                <li>Statisztikai, funkcionális és marketing sütik: Jogalapja a Felhasználó önkéntes, 
-                    kifejezett hozzájárulása a GDPR 6. cikk (1) bekezdés a) pontja alapján.</li>
+                <li>Szükséges (alapműködést biztosító) sütik: Jogalapja az elektronikus kereskedelmi szolgáltatásokról 
+                    szóló törvény (Ektv.) 13/A. § (3) bekezdése (a szolgáltatás biztosításához technikailag elengedhetetlen, 
+                    ideértve a Felhasználó süti-döntését elmentő helyi tárolót is).</li>
+                <li>Statisztikai és felhasználói élményt követő sütik (Google Analytics, Microsoft Clarity): 
+                    Jogalapja a Felhasználó önkéntes, kifejezett hozzájárulása a GDPR 6. cikk (1) bekezdés a) pontja alapján.</li>
             </ul>
             <li>A hozzájárulás módosítása és visszavonása:</li>
             <ul className="list-disc list-inside">
-            <li>A Felhasználó a sütikre vonatkozó döntését (hozzájárulását) bármikor ingyenesen megváltoztathatja 
-                vagy visszavonhatja a weboldal láblécében található Cookie-nyilatkozat linken keresztül, 
-                vagy a böngészője beállításaiban a sütik törlésével.</li>
-            </ul>
-            <li>Automatikus süti-kimutatás:</li>
-            <ul className="list-disc list-inside">
-            <li>A Cookiebot havonta egyszer automatikusan pásztázza a weboldalt, és frissíti a sütik pontos 
-                listáját, azok lejárati idejét és célját. A mindenkor aktuális, részletes süti-lista és 
-                azok technikai leírása közvetlenül a süti-kezelő ablakban érhető el a Felhasználók számára.</li>
+            <li>A Felhasználónak bármikor joga van a korábban megadott süti-hozzájárulását módosítani vagy teljesen visszavonni.</li>
+            <li>Ennek érdekében az Adatkezelő a weboldal láblécében (Footer) egy állandóan elérhető „Süti beállítások” opciót biztosít. 
+                Erre kattintva a süti-szabályozó ablak újra megjelenik, ahol a döntés felülbírálható.</li>
+            <li>Alternatív módon a Felhasználó a saját böngészőjének beállításaiban a sütik, valamint a helyi tároló 
+                (localStorage / suti_dontes kulcs) adatainak törlésével is kezdeményezheti a rendszer alaphelyzetbe állítását.</li>
             </ul>
         </ol>
     </section>

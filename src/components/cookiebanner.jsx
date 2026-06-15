@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false);
 
-  // Segédfüggvény a szabályos Google gtag parancsok kiküldéséhez
   const emitGtag = (...args) => {
     window.dataLayer = window.dataLayer || [];
     if (!window.gtag) {
@@ -20,7 +19,6 @@ export default function CookieBanner() {
     const consent = localStorage.getItem('suti_dontes');
     
     if (!consent) {
-      // Alapértelmezett elutasítás a Google Consent Mode felé
       emitGtag('consent', 'default', {
         'analytics_storage': 'denied',
         'ad_storage': 'denied',
@@ -29,15 +27,21 @@ export default function CookieBanner() {
       });
       setShowBanner(true);
     } else {
-      // Ha már van mentett döntés, azt küldjük be azonnal
       pushToDataLayer(consent);
     }
+
+    // EZ AZ ÚJ RÉSZ: Figyeljük, ha valaki rákattint a láblécben a linkre
+    const handleOpenTrigger = () => setShowBanner(true);
+    window.addEventListener('open-cookie-banner', handleOpenTrigger);
+    
+    return () => {
+      window.removeEventListener('open-cookie-banner', handleOpenTrigger);
+    };
   }, []);
 
   const pushToDataLayer = (status) => {
     window.dataLayer = window.dataLayer || [];
     
-    // 1. Google Consent Mode v2 API frissítés (Eltünteti a GTM hibát!)
     const googleConsentStatus = status === 'granted' ? 'granted' : 'denied';
     emitGtag('consent', 'update', {
       'analytics_storage': googleConsentStatus,
@@ -46,7 +50,6 @@ export default function CookieBanner() {
       'ad_personalization': googleConsentStatus
     });
 
-    // 2. Egyedi GTM esemény a saját triggerek indításához (GA4, Clarity)
     window.dataLayer.push({
       event: 'cookie_consent_update',
       cookie_consent_status: status
