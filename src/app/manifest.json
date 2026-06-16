@@ -1,6 +1,6 @@
 {
   "name": "Via Mundorum",
-  "short_name": "Via Mundorum",
+  "short_name": "ViaMundorum",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#0006a2",
+  "theme_color": "#030c1b",
+  "background_color": "#030c1b",
   "display": "standalone"
 }
