@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { createClient } from "@/utils/supabase/client"; // Figyelj az elérési útra az utils helyétől függően!
+import  createClient  from "@/utils/supabase/client"; // Figyelj az elérési útra az utils helyétől függően!
 
 export default function FajlFeltoltes() {
   const [file, setFile] = useState(null);
