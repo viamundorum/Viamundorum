@@ -62,7 +62,8 @@ export default function ProjectPage() {
               </div>
             </dl>
             <p className="server-info">
-              <em>A tárhelyszolgáltató szerverei az Amerikai Egyesült Államokban találhatóak.</em>
+              <em>A tárhelyszolgáltató szerverei az Amerikai Egyesült Államokban találhatóak. 
+                Az oldal a fájlok és adatok strukturált tárolásához a Supabase Inc. felhőalapú infrastruktúráját használja.</em>
             </p>
           </section>
 

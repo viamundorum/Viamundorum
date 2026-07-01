@@ -30,7 +30,7 @@ export default function PresentPage() {
 
         <p>
           A platform tudományos alapjait az Eszterházy Károly Katolikus Egyetemen folytatott 
-          tanulmányaim és az Óbudai Egyetem (ÓE RKK) 2026 Projektkonferenciáján publikálandó munkám adják: 
+          tanulmányaim és az Óbudai Egyetem (ÓE RKK) 2026 Projektkonferenciáján publikált munkám adják: 
           <em> „Matematikai képletek és példatár a megújuló energiaforrások témakörében”</em>. A kutatás során 
           <strong> Mika János</strong> és <strong>Oláhné Téglási Ilona</strong> szakmai mentorálása segítette a tartalom elmélyítését.
         </p>
@@ -80,7 +80,15 @@ export default function PresentPage() {
               </p>
             </div>
             <div className="card-action">
-              <div href="#" className="btn-portfolio btn-dark" download>📄 Letöltés (PDF) - Hamarosan letölthető...</div>
+              <a 
+                href="https://dbcteiabfokprbmhrhef.supabase.co/storage/v1/object/public/egyetemi_anyagok/Szoeletrajz.pdf" 
+                className="btn-portfolio btn-dark" 
+                download="A_hívatlan_szó_etimológiája.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📄 Letöltés (PDF)
+              </a>
             </div>
           </div>
 
@@ -97,7 +105,15 @@ export default function PresentPage() {
               </p>
             </div>
             <div className="card-action">
-              <div href="#" className="btn-portfolio btn-dark" download>📄 Projektcsomag letöltése - Hamarosan letölthető...</div>
+              <a 
+                href="https://dbcteiabfokprbmhrhef.supabase.co/storage/v1/object/public/egyetemi_anyagok/Konigsbergi_projektcsomag.zip" 
+                className="btn-portfolio btn-dark" 
+                download="Konigsbergi_toredek_projektcsomag.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📄 Projektcsomag letöltése (ZIP)
+              </a>
             </div>
           </div>
 
@@ -114,7 +130,15 @@ export default function PresentPage() {
               </p>
             </div>
             <div className="card-action">
-              <div href="#" className="btn-portfolio btn-dark" download>📄 Letöltés (PDF) - Hamarosan letölthető...</div>
+              <a 
+                href="https://dbcteiabfokprbmhrhef.supabase.co/storage/v1/object/public/egyetemi_anyagok/Nyelvi_valtozasok.pdf" 
+                className="btn-portfolio btn-dark" 
+                download="Magyar_hangvaltozasok_logikai_rendszere.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📄 Letöltés (PDF)
+              </a>
             </div>
           </div>
 
@@ -124,7 +148,7 @@ export default function PresentPage() {
 
       {/* 3. SZEKCIÓ: Publikáció (2 kártya egymás mellett) */}
       <section className="portfolio-section">
-        <h3 className="section-heading">Hivatalos Publikációk</h3>
+        <h3 className="section-heading">Publikációk & Diplomamunkák</h3>
         
         <div className="cards-row-2">
           
@@ -140,8 +164,13 @@ export default function PresentPage() {
               </p>
             </div>
             <div className="card-action">
-              <div className="btn-portfolio btn-blue">
-                Absztrakt megtekintése - Hamarosan letölthető...
+              <div 
+                href="https://uni-obuda.hu/a-pontos-egyetemi-aloldal-cime" 
+                className="btn-portfolio btn-blue"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+              Absztrakt megtekintése az ÓE oldalán ↗
               </div>
             </div>
           </div>
@@ -158,9 +187,47 @@ export default function PresentPage() {
               </p>
             </div>
             <div className="card-action">
-              <div className="btn-portfolio btn-indigo">
-                Hivatalos kiadványkötet - Hamarosan letölthető...
+              <div 
+                href="https://uni-obuda.hu/a-konferencia-kotet-linkje" 
+                className="btn-portfolio btn-indigo"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+              Hivatalos kiadványkötet megtekintése ↗
               </div>
+            </div>
+          </div>
+
+          {/* ÚJ 3. KÁRTYA: EKKE Példatár és Képletgyűjtemény (Szakdolgozat) */}
+          <div className="portfolio-card badge-teal">
+            <div className="card-content">
+              <span className="card-badge">Szakdolgozat</span>
+              <h4 className="card-title">Példatár és Képletgyűjtemény a Megújuló Energiaforrásokhoz</h4>
+              <p className="card-institution">Eszterházy Károly Katolikus Egyetem</p>
+              <p className="card-description">
+                A szakdolgozat alapjául szolgáló, komplex oktatási segédanyag és digitális feladatgyűjtemény. A kiadvány célja, hogy 
+                a tiszta energiatechnológiák működését kézzelfogható matematikai modelleken és számítási példákon keresztül hozza közelebb a hallgatókhoz.
+              </p>
+            </div>{/* Itt a két gomb egymás alatt a flex-col segítségével */}
+            <div className="card-action btn-stack-vertical">
+              <a 
+                href="https://uni-eszterhazy.hu/matinf/m/e-jegyzet/tamop-e-jegyzetek-75/e-jegyzetek-matematika-tanaroknak" 
+                className="btn-portfolio btn-teal"
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ marginBottom: '8px' }}
+              >
+                Szakdolgozat megtekintése az EKKE oldalán ↗
+              </a>
+              <a 
+                href="https://uni-eszterhazy.hu/api/media/file/df0a711981ff53773281732d1afc61b57a3490d0" 
+                className="btn-portfolio btn-dark" 
+                download="Pesak_Dora_Megujulo_Energia_Peldatar.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📄 Közvetlen letöltés (PDF)
+              </a>
             </div>
           </div>
 

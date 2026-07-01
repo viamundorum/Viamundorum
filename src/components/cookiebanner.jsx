@@ -92,7 +92,8 @@ export default function CookieBanner() {
           Süti beállítások 🍪
         </h4>
         <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.5', color: '#4a5568' }}>
-          A honlap megfelelő működéséhez és a látogatottsági statisztikák elemzéséhez sütiket használunk. Az „Elfogadom” gombbal hozzájárulsz a Google Analytics és Clarity használatához.
+          A honlap megfelelő működéséhez és a látogatottsági statisztikák elemzéséhez sütiket használunk. 
+          Az „Elfogadom” gombbal hozzájárulsz a Google Analytics és Microsoft Clarity használatához.
         </p>
       </div>
       

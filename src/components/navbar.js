@@ -3,13 +3,12 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
-export default function Navbar() {
+// 1. LÉPÉS: Elfogadjuk a layout.js-ből érkező 'user' propot
+export default function Navbar({ user }) {
   const router = useRouter();
 
-  // Ez a függvény kezeli a keresést
   const onSearch = (e) => {
     e.preventDefault();
-    // Megkeressük az input mezőt az űrlapon belül
     const term = e.target.searchField.value;
     
     if (term.trim()) {
@@ -20,17 +19,22 @@ export default function Navbar() {
   return (
     <header>
       <Link href="/worlds" style={{ textDecoration: 'none', color: 'inherit' }}>
-    
-      <div className="logo-title">Via Mundorum</div>
+        <div className="logo-title">Via Mundorum</div>
       </Link>
       <nav>
         <Link href="/">Kezdőlap</Link>
         <Link href="/worlds">Világok</Link>
-      {/*  <Link href="/auth">Bejelentkezés</Link> */}
+        
+        {/* 2. LÉPÉS: Feltételes megjelenítés az Auth állapottól függően */}
+       {/* {user ? (
+          <Link href="/dashboard" style={{ fontWeight: 'bold' }}>🔒 Fiókom</Link>
+        ) : (
+          <Link href="/auth">Belépés</Link>
+        )} */}
+        
         <Link href="/feedback">Kapcsolat</Link>
       </nav>
 
-      {/* Fontos: a div helyett form-ot használunk, hogy az Enter gomb is működjön! */}
       <form className="search" onSubmit={onSearch}>
         <input 
           name="searchField" 

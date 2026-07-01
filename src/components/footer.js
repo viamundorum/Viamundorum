@@ -7,7 +7,8 @@ export default function Footer() {
     <footer>
       <div className="footer-links">
         <Link href="/gdpr">Adatkezelési Tájékoztató</Link>
-        <Link href="/aszf">Felhasználási Feltételek</Link>
+        <Link href="/aszf">ÁSZF</Link>
+        <Link href="/userdata">Adattörlés</Link>
         <Link href="/project">Impresszum</Link>
         
         {/* A gombunk így már tökéletesen és hiba nélkül fog működni */}

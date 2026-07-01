@@ -1510,7 +1510,6 @@ nav a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 24px;
-  max-width: 900px;
 }
 
 /* MOBILOS FIX: Ha nagyon kicsi a kijelző, ne csússzanak szét a rácsok */
@@ -1620,4 +1619,10 @@ nav a {
   background-color: #4f46e5;
   color: white;
   box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.btn-teal {
+  background-color: #00685b; /* Harmonizál a badge-teal szövegszínével */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 104, 91, 0.2);
 }

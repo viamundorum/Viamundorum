@@ -3,6 +3,8 @@ import Script from 'next/script'
 import "./globals.css";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+// 1. LÉPÉS: Beimportáljuk a Supabase szerver klienst
+import createClient from "@/utils/supabase/server";
 
 export const metadata = {
   title: "Via Mundorum - Digitális Oktatási Platform",
@@ -13,7 +15,15 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+// 2. LÉPÉS: A függvényt async-ké tesszük
+export default async function RootLayout({ children }) {
+
+  console.log("Supabase kliens importált értéke:", createClient);
+  
+  // 3. LÉPÉS: Lekérjük az aktuális felhasználót a sütik alapján
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
   return (
     <html lang="hu">
       <head>
@@ -26,7 +36,6 @@ export default function RootLayout({ children }) {
         '--current-accent': 'var(--accent)'
       }}>
         
-        {/* JAVÍTÁS: A GTM fő scriptje bekerült a body elejére, így szabályos */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -35,24 +44,23 @@ export default function RootLayout({ children }) {
           })(window,document,'script','dataLayer','GTM-N7KTWJB2');`}
         </Script>
 
-        {/* 2. KÓDRÉSZLET: A noscript tartalék */}
         <noscript dangerouslySetInnerHTML={{ __html: `
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7KTWJB2"
           height="0" width="0" style="display:none;visibility:hidden"></iframe>
         `}} />
 
-        <Navbar />
+        {/* 4. LÉPÉS: Átadjuk a user objektumot a Navbar-nak */}
+        <Navbar user={user} />
+        
         <main>{children}</main>
         <Footer />
             
-        {/* JAVÍTÁS: GoatCounter script explicit https-sel */}
         <Script
           strategy="afterInteractive"
           data-goatcounter="https://viamundorum.goatcounter.com/count"
           src="https://gc.zgo.at/count.js"
         />
 
-        {/* Itt jelenik meg a saját sütibannerünk */}
         <CookieBanner />
       </body>
     </html>

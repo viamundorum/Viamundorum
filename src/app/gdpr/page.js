@@ -43,9 +43,13 @@ export default function GDPRPage() {
         <p>Az Adatkezelő kizárólag olyan személyes adatokat kezel, amelyeket a Felhasználó önkéntesen ad meg 
             (például kapcsolatfelvétel során).</p>
         <ul className="list-disc list-inside">
-            <li>Az adatkezelés célja: Kapcsolattartás, a Felhasználó kérdéseinek megválaszolása, 
-                a szolgáltatás fejlesztése.</li>
-            <li>Jogalap: Az érintett önkéntes hozzájárulása (GDPR 6. cikk (1) bek. a) pont).</li>
+           <li><strong>Az adatkezelés célja:</strong> A felhasználói fiók létrehozása és fenntartása (regisztráció, belépés), 
+           a játékmenet haladásának mentése, kapcsolattartás, a Felhasználó kérdéseinek megválaszolása, valamint a szolgáltatás fejlesztése.</li>
+           <li><strong>A kezelt adatok köre:</strong> Regisztráció esetén e-mail cím, jelszó (titkosított formában), 
+           teljes név. Közösségi (Facebook/Google) login esetén a szolgáltató által átadott név, e-mail cím és egyedi belső azonosító.</li>
+           <li><strong>Jogalap:</strong> Az érintett önkéntes, kifejezett hozzájárulása (GDPR 6. cikk (1) bek. a) pont) 
+           a regisztráció vagy kapcsolatfelvétel során, valamint a szolgáltatás (játékmenet) biztosítása, ami a felhasználó kérésére 
+           történő lépések megtételéhez szükséges (GDPR 6. cikk (1) bek. b) pont).</li>
         </ul>
     </section>
     <section className="gdpr">
@@ -58,9 +62,20 @@ export default function GDPRPage() {
         <h2>6. Adatfeldolgozók</h2>
         <p>Az adatkezelés során az alábbi szolgáltatókat vesszük igénybe, akik a technikai hátteret biztosítják:</p>
         <ul className="list-disc list-inside">
-            <li>Tárhelyszolgáltató: Vercel Inc. (440 N Barranca Ave #4133, Covina, CA 91723, USA)</li>
-            <li>Levelezőrendszer: Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Írország) 
+            <li><strong>Tárhelyszolgáltató</strong>: Vercel Inc. (440 N Barranca Ave #4133, Covina, CA 91723, USA)</li>
+            <li><strong>Levelezőrendszer</strong>: Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Írország) 
                 – a <SafeEmail /> címre érkező üzenetek kezelése.</li>
+            <li><strong>Adatbázis- és felhőtárhely-szolgáltató</strong>: Supabase Inc. (970 Summer St, Stamford, CT 06905, USA) 
+                – A weboldal interaktív működéséhez szükséges strukturált adatok, valamint a letölthető 
+                tanulmányi segédletek (PDF és ZIP fájlok) biztonságos felhőalapú tárolása 
+                (az adatok tárolása az Európai Unión belüli, frankfurti szervereken történik).</li>
+            <li><strong>Közösségi hitelesítési szolgáltatók (OAuth)</strong>:
+        <ul className="list-disc list-inside ml-4">
+            <li>Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Írország)</li>
+            <li>Meta Platforms Ireland Ltd. (4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Írország)</li>
+        </ul>
+    – A felhasználók kényelmes, közösségi fiókkal történő regisztrációjának és bejelentkezésének biztosítása.
+</li>
         </ul>
     </section>
     <section className="gdpr">
@@ -123,7 +138,8 @@ export default function GDPRPage() {
                 (pl. oldalon eltöltött idő, megtekintett világok száma, kattintások, földrajzi régió). Az Adatkezelő a 
                 GA4-ben az IP-cím anonimizálást aktiválta, így a látogatók közvetlen azonosítására nincs lehetőség.</li>
                 <li><strong>Jogalap</strong>: A Felhasználó önkéntes és kifejezett hozzájárulása (GDPR 6. cikk (1) bek. a) pont). 
-                A kód csak akkor lép működésbe, ha a Felhasználó a Cookiebot felületén jóváhagyja a „Statisztikai” sütik használatát.</li>
+                A kód csak akkor lép működésbe, ha a Felhasználó a weboldalon megjelenő „Süti beállítások” felületen 
+                jóváhagyja a statisztikai sütik használatát.</li>
             </ul>
             <li>Microsoft Clarity</li>
             <ul className="list-disc list-inside">
@@ -132,8 +148,8 @@ export default function GDPRPage() {
                 segít elemző hőtérképek (heatmaps) generálásában, valamint anonim módon rögzíti a képernyő-interakciókat 
                 (pl. egérmozgás, görgetés), amellyel feltárhatók az esetleges fejlesztési hibák vagy az oldal nehezen kezelhető részei.</li>
                 <li><strong>Jogalap</strong>: A Felhasználó önkéntes és kifejezett hozzájárulása (GDPR 6. cikk (1) bek. a) pont). 
-                A kód betöltése mindaddig blokkolva van, amíg a Felhasználó a Cookiebot felületén hozzá nem járul a 
-                statisztikai/funkcionális sütik futtatásához.</li>
+                A kód betöltése mindaddig blokkolva van, amíg a Felhasználó a weboldal saját „Süti beállítások” felületén 
+                jóvá nem hagyja a statisztikai és funkcionális sütik használatát.</li>
             </ul>
             <li>GoatCounter</li>
             <ul className="list-disc list-inside">
@@ -155,7 +171,13 @@ export default function GDPRPage() {
     </section>
 
     <section className="gdpr">
-        <h2>9. Jogorvoslati lehetőségek</h2>
+        <h2>9. A Felhasználó (Érintett) jogai</h2>
+        <p>A GDPR értelmében Önnek joga van az Adatkezelőtől tájékoztatást és hozzáférést kérni a személyes adataihoz, kérheti azok helyesbítését, törlését (az „elfeledtetéshez való jogot”) vagy kezelésének korlátozását, valamint tiltakozhat a személyes adatok kezelése ellen, és élhet az adathordozhatóság jogával.</p>
+        <p>Amennyiben a Facebook-fiókjával regisztrált, és vissza szeretné vonni az alkalmazás hozzáférését, illetve törölni szeretné a játékban tárolt profilját, ezt megteheti a saját Facebook-fiókja Beállítások / Alkalmazások menüpontjában, vagy kérheti közvetlenül tőlünk az alábbi pontban megadott e-mail címen.</p>
+    </section>
+
+    <section className="gdpr">
+        <h2>10. Jogorvoslati lehetőségek</h2>
         <p>Mindent megteszünk, hogy személyes adatait biztonságban kezeljük. Amennyiben mégis panasza 
             lenne, az alábbi módokon teheti meg:</p>
         <ul className="list-disc list-inside">

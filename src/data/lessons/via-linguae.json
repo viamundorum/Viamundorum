@@ -40,6 +40,11 @@
           "id": "msh",
           "title": "Mássalhangzók",
           "content": "Hamarosan..."
+        },
+        {
+          "id": "hangtorveny",
+          "title": "Hangtörvények",
+          "content": "A hangok egymásra hatása..."
         }
       ]
     },
