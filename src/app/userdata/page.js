@@ -1,4 +1,4 @@
-import SafeEmail from '@/components/safeemail';
+import StaticEmail from '@/components/staticemail';
 import Link from 'next/link';
 
 export const metadata = {
@@ -15,14 +15,16 @@ export default function UserDataDeletionPage() {
 
       <section className="gdpr">
         <p>Hatályos: 2026. május 15-től visszavonásig.</p>
-        <p>A Facebook (Meta) és a Google platform szabályzatainak, valamint a GDPR előírásainak megfelelően a <strong>Via Mundorum</strong> felhasználóinak bármikor joguk van kérni a rendszerünkben tárolt személyes adataik végleges törlését, illetve visszavonhatják a közösségi fiókokkal való összekapcsolást.</p>
+        <p>A Facebook (Meta) és a Google platform szabályzatainak, valamint a GDPR előírásainak megfelelően a <strong>Via Mundorum</strong> 
+        felhasználóinak bármikor joguk van kérni a rendszerünkben tárolt személyes adataik végleges törlését, illetve visszavonhatják a 
+        közösségi fiókokkal való összekapcsolást.</p>
       </section>      
 
       <section className="gdpr">
         <h2>1. Adattörlés kezdeményezése e-mailben</h2>
-        <p>A legegyszerűbb módja az adatai törlésének, ka közvetlenül felveszi velünk a kapcsolatot:</p>
+        <p>A legegyszerűbb módja az adatai törlésének, ha közvetlenül felveszi velünk a kapcsolatot:</p>
         <ul className="list-disc list-inside">
-          <li>Küldjön egy elektronikus levelet a hivatalos e-mail címünkre: <SafeEmail /></li>
+          <li>Küldjön egy elektronikus levelet a hivatalos e-mail címünkre: <StaticEmail /></li>
           <li>A levél tárgyaként kérjük, adja meg: <strong>„Adattörlési kérelem – Via Mundorum”</strong></li>
           <li>Az üzenetben tüntesse fel a játékban használt felhasználónevét vagy a fiókhoz tartozó e-mail címet.</li>
         </ul>
