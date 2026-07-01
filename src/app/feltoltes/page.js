@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import  createClient  from "@/utils/supabase/client"; // Figyelj az elérési útra az utils helyétől függően!
+// JAVÍTVA: Kapcsos zárójelek hozzáadva a nevesített exporthoz!
+import { supabase } from "@/utils/supabase/client"; 
 
 export default function FajlFeltoltes() {
   const [file, setFile] = useState(null);
@@ -9,7 +10,9 @@ export default function FajlFeltoltes() {
   const [publicUrl, setPublicUrl] = useState("");
 
   const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+    if (e.target.files && e.target.files[0]) {
+      setFile(e.target.files[0]);
+    }
   };
 
   const handleUpload = async () => {
@@ -24,7 +27,7 @@ export default function FajlFeltoltes() {
     // Egyedi fájlnév generálása, hogy ne írják felül egymást a fájlok
     const fajlNev = `${Date.now()}-${file.name}`;
 
-    // Feltöltés a 'tananyagok' bucketbe
+    // Feltöltés az 'egyetemi_anyagok' bucketbe
     const { data, error } = await supabase.storage
       .from("egyetemi_anyagok")
       .upload(fajlNev, file);
@@ -61,7 +64,7 @@ export default function FajlFeltoltes() {
           color: "white",
           border: "none",
           borderRadius: "4px",
-          cursor: "pointer"
+          cursor: loading ? "not-allowed" : "pointer"
         }}
       >
         {loading ? "Feltöltés..." : "Feltöltés a Supabase-re"}
@@ -69,8 +72,8 @@ export default function FajlFeltoltes() {
 
       {publicUrl && (
         <div style={{ marginTop: "20px" }}>
-          <p><strong>A fájl közvetlen linkje:</strong></p>
-          <a href={publicUrl} target="_blank" rel="noreferrer" style={{ color: "#0070f3" }}>
+          <p><strong>A fájl közvetlen linkje (ezt másold be a kártyákhoz):</strong></p>
+          <a href={publicUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#0070f3", wordBreak: "break-all" }}>
             {publicUrl}
           </a>
         </div>

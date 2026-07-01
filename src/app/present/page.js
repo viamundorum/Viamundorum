@@ -164,14 +164,14 @@ export default function PresentPage() {
               </p>
             </div>
             <div className="card-action">
-              <div 
-                href="https://uni-obuda.hu/a-pontos-egyetemi-aloldal-cime" 
+              <a 
+                href="#" 
                 className="btn-portfolio btn-blue"
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-              Absztrakt megtekintése az ÓE oldalán ↗
-              </div>
+              Absztrakt megtekintése az ÓE oldalán ↗ Hamarosan...
+              </a>
             </div>
           </div>
 
@@ -187,14 +187,14 @@ export default function PresentPage() {
               </p>
             </div>
             <div className="card-action">
-              <div 
-                href="https://uni-obuda.hu/a-konferencia-kotet-linkje" 
+              <a 
+                href="#" 
                 className="btn-portfolio btn-indigo"
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-              Hivatalos kiadványkötet megtekintése ↗
-              </div>
+              Hivatalos kiadványkötet megtekintése ↗ Hamarosan...
+              </a>
             </div>
           </div>
 
