@@ -219,23 +219,23 @@ export default function PresentPage() {
             </div>{/* Itt a két gomb egymás alatt a flex-col segítségével */}
             <div className="card-action btn-stack-vertical">
               <a 
-                href="https://uni-eszterhazy.hu/matinf/m/e-jegyzet/tamop-e-jegyzetek-75/e-jegyzetek-matematika-tanaroknak" 
+                href="https://uni-eszterhazy.hu/api/media/file/df0a711981ff53773281732d1afc61b57a3490d0" 
                 className="btn-portfolio btn-teal"
                 target="_blank" 
                 rel="noopener noreferrer"
                 style={{ marginBottom: '8px' }}
               >
-                Szakdolgozat megtekintése az EKKE oldalán ↗
+                Szakdolgozat megtekintése
               </a>
-              <a 
-                href="https://uni-eszterhazy.hu/api/media/file/df0a711981ff53773281732d1afc61b57a3490d0" 
+             {/*} <a 
+                href="https://uni-eszterhazy.hu/matinf/m/e-jegyzet/tamop-e-jegyzetek-75/e-jegyzetek-matematika-tanaroknak" 
                 className="btn-portfolio btn-dark" 
                 download="Pesak_Dora_Megujulo_Energia_Peldatar.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                📄 Közvetlen letöltés (PDF)
-              </a>
+                📄 Közvetlen letöltés (PDF)  az EKKE oldalán ↗
+              </a>*/}
             </div>
           </div>
 
