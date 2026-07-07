@@ -213,7 +213,7 @@ export default function PresentPage() {
               <h4 className="card-title">A megújuló energiaforrások matematikája: képletgyűjtemény és példatár</h4>
               <p className="card-institution">Eszterházy Károly Katolikus Egyetem</p>
               <p className="card-description">
-                A szakdolgozat alapjául szolgáló, komplex oktatási segédanyag és digitális feladatgyűjtemény. A kiadvány célja, hogy 
+                A publikáció alapjául szolgáló, komplex oktatási segédanyag és digitális feladatgyűjtemény. Célja, hogy 
                 a tiszta energiatechnológiák működését kézzelfogható matematikai modelleken és számítási példákon keresztül hozza közelebb a hallgatókhoz.
               </p>
             </div>{/* Itt a két gomb egymás alatt a flex-col segítségével */}
