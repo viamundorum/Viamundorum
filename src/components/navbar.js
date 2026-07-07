@@ -26,11 +26,11 @@ export default function Navbar({ user }) {
         <Link href="/worlds">Világok</Link>
         
         {/* 2. LÉPÉS: Feltételes megjelenítés az Auth állapottól függően */}
-       {/* {user ? (
+        {/*user ? (
           <Link href="/dashboard" style={{ fontWeight: 'bold' }}>🔒 Fiókom</Link>
         ) : (
           <Link href="/auth">Belépés</Link>
-        )} */}
+        )*/} 
         
         <Link href="/feedback">Kapcsolat</Link>
       </nav>

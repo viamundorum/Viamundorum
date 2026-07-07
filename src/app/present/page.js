@@ -148,7 +148,7 @@ export default function PresentPage() {
 
       {/* 3. SZEKCIÓ: Publikáció (2 kártya egymás mellett) */}
       <section className="portfolio-section">
-        <h3 className="section-heading">Publikációk & Diplomamunkák</h3>
+        <h3 className="section-heading">Publikációk & Egyetemi Kiadványok</h3>
         
         <div className="cards-row-2">
           
@@ -156,7 +156,7 @@ export default function PresentPage() {
           <div className="portfolio-card badge-blue">
             <div className="card-content">
               <span className="card-badge">Kutatási Absztrakt</span>
-              <h4 className="card-title">Matematikai képletek és példatár a megújuló energiaforrások témakörében</h4>
+              <h4 className="card-title">Óbudai Egyetem (ÓE RKK) Projektkonferencia 2026</h4>
               <p className="card-institution">Kutatási összefoglaló</p>
               <p className="card-description">
                 A projekt elméleti és tudományos magja. A fenntarthatóság kérdéskörét matematikai modelleken keresztül megközelítő 
@@ -165,12 +165,12 @@ export default function PresentPage() {
             </div>
             <div className="card-action">
               <a 
-                href="#" 
+                href="https://projektkonferencia.rkk.uni-obuda.hu/wp-content/uploads/2026/07/Projektkonferencia_2026_Absztrakt_kotet.pdf" 
                 className="btn-portfolio btn-blue"
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-              Absztrakt megtekintése az ÓE oldalán ↗ Hamarosan...
+              Absztrakt megtekintése
               </a>
             </div>
           </div>
@@ -179,21 +179,29 @@ export default function PresentPage() {
           <div className="portfolio-card badge-indigo">
             <div className="card-content">
               <span className="card-badge">Konferencia & Kiadvány</span>
-              <h4 className="card-title">Óbudai Egyetem (ÓE RKK) 2026 Projektkonferencia</h4>
-              <p className="card-institution">Hivatalos Megjelenés</p>
+              <h4 className="card-title">Matematikai képletek és példatár a megújuló energiaforrások témakörében</h4>
+              <p className="card-institution">Lektorált konferenciakötetben megjelent tanulmány</p>
               <p className="card-description">
-                A kutatómunka hivatalos megjelenési helye és szakmai közege. A konferencia kötete hivatalos formában rögzíti az 
-                elért eredményeket, támogatva a fenntarthatóság élő kompetenciaként való átültetését az oktatási szintek között.
+                Projektkonferencia 2026 Tanulmánykötet
+              </p>
+              <p className="card-description">
+                Pesák Dóra Zita – Oláhné Téglási Ilona – Mika János (2026)
+              </p>
+              <p className="card-description">
+                ISBN: 978-963-449-421-8
+              </p>
+              <p className="card-description">
+                pp. 172-191
               </p>
             </div>
             <div className="card-action">
               <a 
-                href="#" 
+                href="https://projektkonferencia.rkk.uni-obuda.hu/wp-content/uploads/2026/07/Projektkonferencia_2026_-tanulmanykotet.pdf" 
                 className="btn-portfolio btn-indigo"
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-              Hivatalos kiadványkötet megtekintése ↗ Hamarosan...
+              Hivatalos kiadványkötet megtekintése
               </a>
             </div>
           </div>
@@ -202,7 +210,7 @@ export default function PresentPage() {
           <div className="portfolio-card badge-teal">
             <div className="card-content">
               <span className="card-badge">Szakdolgozat</span>
-              <h4 className="card-title">Példatár és Képletgyűjtemény a Megújuló Energiaforrásokhoz</h4>
+              <h4 className="card-title">A megújuló energiaforrások matematikája: képletgyűjtemény és példatár</h4>
               <p className="card-institution">Eszterházy Károly Katolikus Egyetem</p>
               <p className="card-description">
                 A szakdolgozat alapjául szolgáló, komplex oktatási segédanyag és digitális feladatgyűjtemény. A kiadvány célja, hogy 

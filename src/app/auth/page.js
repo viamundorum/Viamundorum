@@ -141,7 +141,7 @@ export default function AuthPage() {
     if (error) {
       setErrorMessage(error.message === 'Invalid login credentials' ? 'Hibás e-mail cím vagy jelszó!' : error.message);
     } else {
-      router.push('/login');
+      router.push('/auth/callback?next=/dashboard');
     }
   };
 
@@ -154,7 +154,7 @@ export default function AuthPage() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/login`,
+        redirectTo: `${window.location.origin}/auth/callback?next=/dashboard`,
       },
     });
 
@@ -173,7 +173,7 @@ export default function AuthPage() {
     provider: 'facebook',
     options: {
       // Ez pontosan ugyanoda irányítja a felhasználót, ahova a Google is
-      redirectTo: `${window.location.origin}/login`,
+      redirectTo: `${window.location.origin}/auth/callback?next=/dashboard`,
     },
   });
 

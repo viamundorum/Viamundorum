@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server'
-import createClient from '@/utils/supabase/server' // A szerver-oldali Supabase kliensed
+import { revalidatePath } from 'next/cache' // Kifejezetten a menüsor frissítése miatt kell!
+import createClient from '@/utils/supabase/server' 
 
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url)
   const code = searchParams.get('code')
-  // Ha volt megadva konkrét oldal (pl. /profil), oda küldjük, ha nem, a főoldalra (/)
+  
+  // Ha sikeres a belépés, dobjuk a /dashboard-ra
   const next = searchParams.get('next') ?? '/dashboard'
 
   if (code) {
@@ -13,10 +15,14 @@ export async function GET(request: Request) {
     const { error } = await supabase.auth.exchangeCodeForSession(code)
     
     if (!error) {
+      // Frissítjük a teljes oldalstruktúra gyorsítótárát, így a layout.js 
+      // azonnal észreveszi az új usert, és átvált a Navbar!
+      revalidatePath('/', 'layout')
+      
       return NextResponse.redirect(`${origin}${next}`)
     }
   }
 
-  // Ha valami hiba történt, visszaküldjük a hibaüzenettel a belépőre
-  return NextResponse.redirect(`${origin}/login?error=auth-failed`)
+  // Hiba esetén visszaküldjük a te valós /auth oldaladra
+  return NextResponse.redirect(`${origin}/auth?error=auth-failed`)
 }
